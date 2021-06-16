@@ -4,7 +4,7 @@ import common.constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class TicketPricePage {
+public class TicketPricePage extends GeneralPage{
     //Locators
     private final By trainTxt = By.xpath("//tr[@class='TableSmallHeader']/th");
     private final By bookHSBtn = By.xpath("//td[.='HS:']/ancestor::tr//a[.='Book ticket']");

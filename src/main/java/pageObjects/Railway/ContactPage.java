@@ -4,7 +4,7 @@ import common.constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class ContactPage {
+public class ContactPage extends GeneralPage{
     //Locators
     private final By linkEmail = By.xpath("//b[.=\"Email: \"]//following-sibling::a");
 

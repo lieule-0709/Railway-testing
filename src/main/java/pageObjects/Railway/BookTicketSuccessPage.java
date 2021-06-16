@@ -4,7 +4,7 @@ import common.constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class BookTicketSuccessPage {
+public class BookTicketSuccessPage extends GeneralPage {
     //Locators
     private final By title = new By.ByCssSelector("#content h1");
     private final By departStationTd = By.xpath("//td[count(//th[.='Depart Station']/preceding-sibling::th)+1]");

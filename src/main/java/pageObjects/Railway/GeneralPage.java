@@ -7,55 +7,10 @@ import org.openqa.selenium.WebElement;
 public class GeneralPage {
 
     //Locators
-    private final By tabHome = By.xpath("//div[@id='menu']//a[.='Home']");
-    private final By tabFAQ = By.xpath("//div[@id='menu']//a[.='FAQ']");
-    private final By tabContact = By.xpath("//div[@id='menu']//a[.='Contact']");
-    private final By tabTimetable = By.xpath("//div[@id='menu']//a[.='Timetable']");
-    private final By tabTicketPrice = By.xpath("//div[@id='menu']//a[.='Ticket price']");
-    private final By tabBookTicket = By.xpath("//div[@id='menu']//a[.='Book ticket']");
-    private final By tabRegister = By.xpath("//div[@id='menu']//a[.='Register']");
-    private final By tabLogin = By.xpath("//div[@id='menu']//a[.='Login']");
-    private final By tabLogout = By.xpath("//div[@id='menu']//a[.='Logout']");
     private final By lbWelcome = By.xpath("//div[@class='account']//strong");
     private final By tabSelected = By.cssSelector(" #menu .selected");
 
     //Element
-    public WebElement getTabHome(){
-        return Constant.WEBDRIVER.findElement(tabHome);
-    }
-
-    public WebElement getTabFAQ(){
-        return Constant.WEBDRIVER.findElement(tabFAQ);
-    }
-
-    public WebElement getTabContact(){
-        return Constant.WEBDRIVER.findElement(tabContact);
-    }
-
-    public WebElement getTabTimetable(){
-        return Constant.WEBDRIVER.findElement(tabTimetable);
-    }
-
-    public WebElement getTabTicketPrice(){
-        return Constant.WEBDRIVER.findElement(tabTicketPrice);
-    }
-
-    public WebElement getTabBookTicket(){
-        return Constant.WEBDRIVER.findElement(tabBookTicket);
-    }
-
-    public WebElement getTabRegister(){
-        return Constant.WEBDRIVER.findElement(tabRegister);
-    }
-
-    public WebElement getTabLogin(){
-        return Constant.WEBDRIVER.findElement(tabLogin);
-    }
-
-    public WebElement getTabLogout(){
-        return Constant.WEBDRIVER.findElement(tabLogout);
-    }
-
     public WebElement getTabSelected() {
         return Constant.WEBDRIVER.findElement(tabSelected);
     }
@@ -64,58 +19,61 @@ public class GeneralPage {
         return Constant.WEBDRIVER.findElement(lbWelcome);
     }
 
-    //method
-
     public WebElement getTab(String name){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@id='menu']//a[.='" + name+ "']"));
     }
 
+    //Methods
     public String getWelcomeMessage(){
         return this.getLbWelcome().getText();
     }
 
     public LoginPage navigateToLoginPage(){
-        this.getTabLogin().click();
+        this.getTab("Login").click();
         return new LoginPage();
     }
 
-    public void navigateToHomePage(){
-        this.getTabHome().click();
+    public HomePage navigateToHomePage(){
+        this.getTab("Home").click();
+        return new HomePage();
     }
 
-    public void navigateToFAQPage(){
-        this.getTabFAQ().click();
+    public FAQPage navigateToFAQPage(){
+        this.getTab("FAQ").click();
+        return new FAQPage();
     }
 
-    public void navigateToContactPage(){
-        this.getTabContact().click();
+    public ContactPage navigateToContactPage(){
+        this.getTab("Contact").click();
+        return new ContactPage();
     }
 
     public TimeTablePage navigateToTimeTablePage(){
-        this.getTabTimetable().click();
+        this.getTab("Timetable").click();
         return new TimeTablePage();
     }
 
-    public void navigateToTicketPricePage(){
-        this.getTabTicketPrice().click();
+    public TicketPricePage navigateToTicketPricePage(){
+        this.getTab("Ticket price").click();
+        return new TicketPricePage();
     }
 
-    public void navigateToBookTicketPage(){
-        this.getTabBookTicket().click();
+    public BookTicketPage navigateToBookTicketPage(){
+        this.getTab("Book ticket").click();
+        return new BookTicketPage();
     }
 
     public RegisterPage navigateToRegisterPage(){
-        this.getTabRegister().click();
+        this.getTab("Register").click();
         return new RegisterPage();
     }
 
     public void navigateToLogoutPage(){
-        this.getTabLogout().click();
+        this.getTab("Logout").click();
     }
 
     public String getTextOfSelectedTab(){
         return this.getTabSelected().getText();
     }
-
 
 }

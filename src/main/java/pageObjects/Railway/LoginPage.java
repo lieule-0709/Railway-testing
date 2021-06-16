@@ -9,9 +9,12 @@ public class LoginPage extends GeneralPage {
     private final By _txtUserName = By.xpath("//input[@id='username']");
     private final By _txtPassword = By.xpath("//input[@id='password']");
     private final By _btnLogin = By.xpath("//input[@value='Login']");
-    private final By _lblLoginErrorMsg = By.xpath("//p[@class='message error LoginForm']");
     private final By registLink = By.xpath("//a[.='Registration Page']");
     private final By forgotPwdLink = By.xpath("//a[.='Forgot Password page']");
+
+    private final By errorMsg = By.xpath("//p[@class='message error LoginForm']");
+    private final By errEmailLbl = By.xpath("//label[@for='username' and @class='validation-error']");
+    private final By errPwdLbl = By.xpath("//label[@for='password' and @class='validation-error']");
 
 
     //Elements
@@ -27,10 +30,6 @@ public class LoginPage extends GeneralPage {
         return Constant.WEBDRIVER.findElement(_btnLogin);
     }
 
-    public WebElement getLblLoginErrorMsg() {
-        return Constant.WEBDRIVER.findElement(_lblLoginErrorMsg);
-    }
-
     public WebElement getRegistLink(){
         return Constant.WEBDRIVER.findElement(registLink);
     }
@@ -39,23 +38,34 @@ public class LoginPage extends GeneralPage {
         return Constant.WEBDRIVER.findElement(forgotPwdLink);
     }
 
+    public WebElement getErrMsg() {
+        return Constant.WEBDRIVER.findElement(errorMsg);
+    }
 
+    public WebElement getErrEmailLbl() {
+        return Constant.WEBDRIVER.findElement(errEmailLbl);
+    }
+
+    public WebElement getErrPwdLbl() {
+        return Constant.WEBDRIVER.findElement(errPwdLbl);
+    }
+
+    //Methods
     public HomePage login(String username, String password) {
-        //Submit login credentials
         this.getTxtUsername().sendKeys(username);
         this.getTxtPassword().sendKeys(password);
         this.getBtnLogin().click();
-
-        //Land on Hone page
         return new HomePage();
     }
 
-    public void clickRegistLink(){
+    public RegisterPage clickRegistLink(){
         this.getRegistLink().click();
+        return new RegisterPage();
     }
 
-    public void clickForgotPwdLink(){
+    public ForgotPasswordPage clickForgotPwdLink(){
         this.getForgotPwdLink().click();
+        return new ForgotPasswordPage();
     }
 
 }

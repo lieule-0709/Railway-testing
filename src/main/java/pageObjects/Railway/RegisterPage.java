@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-public class RegisterPage extends  GeneralPage{
+public class RegisterPage extends GeneralPage{
 
     //Locator
     private final By inputEmail = By.xpath("//input[@id='email']");
@@ -14,6 +14,12 @@ public class RegisterPage extends  GeneralPage{
     private final By inputPID = By.xpath("//input[@id='pid']");
     private final By btnRegister = By.xpath("//input[@value='Register']");
     private final By pSuccess = By.xpath("//div[@id='content']/p");
+
+    private final By errorMsg = By.cssSelector("..message");
+    private final By errEmailLbl = By.xpath("//label[@for='email' and @class='validation-error']");
+    private final By errPwdLbl = By.xpath("//label[@for='password' and @class='validation-error']");
+    private final By errConfirmPwdLbl = By.xpath("//label[@for='confirmPassword' and @class='validation-error']");
+    private final By errPIDLbl = By.xpath("//label[@for='pid' and @class='validation-error']");
 
 
     //Elements
@@ -41,15 +47,28 @@ public class RegisterPage extends  GeneralPage{
         return Constant.WEBDRIVER.findElement(pSuccess);
     }
 
+    public WebElement getErrMsg(){
+        return Constant.WEBDRIVER.findElement(errorMsg);
+    }
+
+    public WebElement getErrEmailLbl(){
+        return Constant.WEBDRIVER.findElement(errEmailLbl);
+    }
+
+    public WebElement getErrPwdLbl(){
+        return Constant.WEBDRIVER.findElement(errPwdLbl);
+    }
+
+    public WebElement getErrConfirmPwdLbl(){
+        return Constant.WEBDRIVER.findElement(errConfirmPwdLbl);
+    }
+
+    public WebElement getErrPIDLbl(){
+        return Constant.WEBDRIVER.findElement(errPIDLbl);
+    }
+
     //Methods
     public RegisterPage regist(String email, String pass, String confirmPass, String pid){
-        System.out.println(email);
-
-        System.out.println(pass);
-
-        System.out.println(confirmPass);
-
-        System.out.println(pid);
 
         this.getInputEmail().sendKeys(email);
         this.getInputPass().sendKeys(pass);

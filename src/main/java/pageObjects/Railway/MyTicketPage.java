@@ -5,7 +5,7 @@ import common.utilities.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class MyTicketPage {
+public class MyTicketPage extends GeneralPage {
 
     //Elements
     public WebElement getOperationBtn(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String expiredDate, String status){
@@ -16,6 +16,10 @@ public class MyTicketPage {
                 "')]/following-sibling::td[contains(.,'"+ bookDate +
                 "')]/following-sibling::td[contains(.,'"+ expiredDate +
                 "')]/following-sibling::td[contains(.,'"+ status + ")]//input"));
+    }
+
+    public WebElement getErrFilterMsg(){
+        return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='error message']"));
     }
 
     public WebElement getDepartStationCbx(){
@@ -36,6 +40,10 @@ public class MyTicketPage {
 
     public WebElement getFilterBtn(){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='Filter']//input[@value='Apply Filter']"));
+    }
+
+    public WebElement getFilterResultLbl(){
+        return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='Filter']//strong/span"));
     }
 
 
