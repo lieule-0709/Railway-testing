@@ -44,7 +44,7 @@ public class HomeTests {
         Assert.assertTrue(verifyTitle);
         Assert.assertEquals(homePage.getTextOfSelectedTab(), "Timetable", "Selected tab is not correct");
 
-        homePage.navigateToTicketPricePage();
+        homePage.navigateToTicketPriceListPage();
         verifyTitle = Constant.WEBDRIVER.getTitle().indexOf("ticket price")!=-1;
         Assert.assertTrue(verifyTitle);
         Assert.assertEquals(homePage.getTextOfSelectedTab(), "Ticket price", "Selected tab is not correct");

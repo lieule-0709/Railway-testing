@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends GeneralPage {
     //Locators
-    private final By _txtUserName = By.xpath("//input[@id='username']");
-    private final By _txtPassword = By.xpath("//input[@id='password']");
+    private final By _txtUserName = By.cssSelector("#username");
+    private final By _txtPassword = By.cssSelector("#password");
     private final By _btnLogin = By.xpath("//input[@value='Login']");
-    private final By registLink = By.xpath("//a[.='Registration Page']");
+    private final By registerLink = By.xpath("//a[.='Registration Page']");
     private final By forgotPwdLink = By.xpath("//a[.='Forgot Password page']");
 
     private final By errorMsg = By.xpath("//p[@class='message error LoginForm']");
@@ -30,8 +30,8 @@ public class LoginPage extends GeneralPage {
         return Constant.WEBDRIVER.findElement(_btnLogin);
     }
 
-    public WebElement getRegistLink(){
-        return Constant.WEBDRIVER.findElement(registLink);
+    public WebElement getRegisterLink(){
+        return Constant.WEBDRIVER.findElement(registerLink);
     }
 
     public WebElement getForgotPwdLink(){
@@ -59,7 +59,7 @@ public class LoginPage extends GeneralPage {
     }
 
     public RegisterPage clickRegistLink(){
-        this.getRegistLink().click();
+        this.getRegisterLink().click();
         return new RegisterPage();
     }
 

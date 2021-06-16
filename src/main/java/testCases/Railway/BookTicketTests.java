@@ -7,12 +7,16 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pageObjects.Railway.BookTicketPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 
 import java.util.concurrent.TimeUnit;
 
 public class BookTicketTests {
+
+    HomePage homePage = new HomePage();
+
     @BeforeMethod
     public void beforeMethod(){
         WebDriverManager.chromedriver().setup();
@@ -28,14 +32,18 @@ public class BookTicketTests {
 
     @Test
     public void TC01() {
-        HomePage homePage = new HomePage();
+
         homePage.open();
 
         LoginPage loginPage = homePage.navigateToLoginPage();
+        loginPage.login(Constant.USERNAME, Constant.PASSWORD).getWelcomeMessage();
 
-        String actualMsg = loginPage.login(Constant.USERNAME, Constant.PASSWORD).getWelcomeMessage();
-        String expectedMsg = "Welcome " + Constant.USERNAME;
+        homePage.navigateToBookTicketPage();
 
-        Assert.assertEquals(actualMsg,expectedMsg, "welcome msg is not correctly");
+        BookTicketPage bookTicketPage= homePage.navigateToBookTicketPage();
+
+        bookTicketPage.bookTicket("6/29/2021", "Đà Nẵng", "Nha Trang", "Hard seat", "2");
+
+
     }
 }

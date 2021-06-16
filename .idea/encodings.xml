@@ -3,7 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/gradlew.bat" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/pageObjects/Railway/TimeTablePage.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/testCases/Railway/BookTicketTests.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/testCases/Railway/TimetableTests.java" charset="windows-1252" />
-    <file url="PROJECT" charset="windows-1252" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -31,9 +31,7 @@ public class TimetableTests {
     public void TC01() {
         HomePage homePage = new HomePage();
         homePage.open();
-
         TimeTablePage timeTablePage = homePage.navigateToTimeTablePage();
-
         timeTablePage.goToBookTicketpage("Sài Gòn", "Huế");
     }
 }

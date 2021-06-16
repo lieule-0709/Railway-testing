@@ -53,9 +53,9 @@ public class GeneralPage {
         return new TimeTablePage();
     }
 
-    public TicketPricePage navigateToTicketPricePage(){
+    public TicketPriceListPage navigateToTicketPriceListPage(){
         this.getTab("Ticket price").click();
-        return new TicketPricePage();
+        return new TicketPriceListPage();
     }
 
     public BookTicketPage navigateToBookTicketPage(){

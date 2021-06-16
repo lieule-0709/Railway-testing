@@ -6,6 +6,6 @@ import org.openqa.selenium.support.ui.Select;
 public class Utilities {
     public static void selectOption(WebElement selectBox, String option){
         Select dropdown = new Select(selectBox);
-        dropdown.selectByValue(option);
+        dropdown.selectByVisibleText(option);
     }
 }
