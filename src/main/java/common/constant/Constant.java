@@ -8,4 +8,5 @@ public class Constant {
     public static final String RAILWAY_URL = "http://railway2.somee.com/";
     public static final String USERNAME = "thanhle@logigear.com";
     public static final String PASSWORD = "12345678";
+    public static final String DATA_LOGIN_PATH = System.getProperty("user.dir") + "/src/main/java/dataObjects/dataLogin.csv";
 }

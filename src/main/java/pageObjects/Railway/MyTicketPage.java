@@ -3,6 +3,7 @@ package pageObjects.Railway;
 import common.constant.Constant;
 import common.utilities.Utilities;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class MyTicketPage extends GeneralPage {
@@ -15,7 +16,7 @@ public class MyTicketPage extends GeneralPage {
                 "')]/following-sibling::td[contains(.,'"+ departDate +
                 "')]/following-sibling::td[contains(.,'"+ bookDate +
                 "')]/following-sibling::td[contains(.,'"+ expiredDate +
-                "')]/following-sibling::td[contains(.,'"+ status + ")]//input"));
+                "')]/following-sibling::td[contains(.,'"+ status + "')]/following-sibling::td/input"));
     }
 
     public WebElement getErrFilterMsg(){
@@ -49,7 +50,12 @@ public class MyTicketPage extends GeneralPage {
 
     //Methods
     public void cancelTicket(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String expiredDate, String status){
-        this.getOperationBtn(departPlace,arrivePlace, seatType, departDate, bookDate,expiredDate,status).click();
+        WebElement btn = this.getOperationBtn(departPlace,arrivePlace, seatType, departDate, bookDate,expiredDate,status);
+
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", btn);
+        btn.click();
+
         Constant.WEBDRIVER.switchTo().alert().accept();
     }
 

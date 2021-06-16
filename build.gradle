@@ -24,6 +24,9 @@ dependencies {
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
 
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-csv
+    implementation group: 'org.apache.commons', name: 'commons-csv', version: '1.8'
+
     apply plugin: 'java'
     compileJava {options.encoding = "UTF-8"}
     compileTestJava {options.encoding = "UTF-8"}

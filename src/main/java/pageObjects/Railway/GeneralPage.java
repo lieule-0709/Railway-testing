@@ -68,8 +68,13 @@ public class GeneralPage {
         return new RegisterPage();
     }
 
+    public MyTicketPage navigateToMyTicketPage(){
+        this.getTab("My ticket").click();
+        return new MyTicketPage();
+    }
+
     public void navigateToLogoutPage(){
-        this.getTab("Logout").click();
+        this.getTab("Log out").click();
     }
 
     public String getTextOfSelectedTab(){
