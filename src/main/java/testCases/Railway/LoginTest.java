@@ -19,28 +19,15 @@ import java.io.FileReader;
 import java.io.Reader;
 import java.util.concurrent.TimeUnit;
 
-public class LoginTest {
+public class LoginTest extends BaseTest{
 
-    @BeforeMethod
-    public void beforeMethod(){
-        WebDriverManager.chromedriver().setup();
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
-
-    @AfterMethod
-    public void afterMethod(){
-        Constant.WEBDRIVER.quit();
-    }
+    private HomePage homePage = new HomePage();
+    private LoginPage loginPage;
 
     @Test
     public void TC01() throws Exception {
-        HomePage homePage = new HomePage();
+
         homePage.open();
-
-        LoginPage loginPage = null;
-
         Object[][] data = Utilities.readCSVData(Constant.DATA_LOGIN_PATH);
         
         for(int i=0; i< data.length; i++){
@@ -48,7 +35,6 @@ public class LoginTest {
             String actualMsg = loginPage.login(data[i][0]+"", data[i][1]+"").getWelcomeMessage();
             String expectedMsg = "Welcome " + data[i][0];
             Assert.assertEquals(actualMsg,expectedMsg, "welcome msg is not correctly");
-
             homePage.navigateToLogoutPage();
         }
     }

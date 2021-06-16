@@ -8,11 +8,11 @@ import org.openqa.selenium.WebElement;
 
 public class TimeTablePage extends GeneralPage {
     //Element
-    public WebElement getCheckPriceLink(String departPlace, String arrivePlace){
+    protected WebElement getCheckPriceLink(String departPlace, String arrivePlace){
         return Constant.WEBDRIVER.findElement(By.xpath("//td[count(//th[.='Depart Station']/preceding-sibling::th) + 1][.='" + departPlace+  "']/../td[.='" + arrivePlace+ "']/../td[count(//th[.='Check Price']/preceding-sibling::th) + 1]"));
     }
 
-    public WebElement getBookTicketLink(String departPlace, String arrivePlace){
+    protected WebElement getBookTicketLink(String departPlace, String arrivePlace){
         return Constant.WEBDRIVER.findElement(By.xpath("//td[count(//th[.='Depart Station']/preceding-sibling::th) + 1][.='" + departPlace+  "']/../td[.='" + arrivePlace+ "']/../td[count(//th[.='Book ticket']/preceding-sibling::th) + 1]"));
     }
 
@@ -23,6 +23,7 @@ public class TimeTablePage extends GeneralPage {
         this.getCheckPriceLink(departPlace, arrivePlace).click();
         return new TicketPricePage();
     }
+
     public BookTicketPage goToBookTicketpage(String departPlace, String arrivePlace){
         JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
         js.executeScript("arguments[0].scrollIntoView(true);", this.getBookTicketLink(departPlace, arrivePlace));

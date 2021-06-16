@@ -15,31 +15,31 @@ public class TicketPricePage extends GeneralPage{
     private final By bookSBCBtn = By.xpath("//td[.='SBC:']/ancestor::tr//a[.='Book ticket']");
 
     //Elements
-    public WebElement getTrainTxt(){
+    protected WebElement getTrainTxt(){
         return Constant.WEBDRIVER.findElement(trainTxt);
     }
 
-    public WebElement getBookHSBtn(){
+    protected WebElement getBookHSBtn(){
         return Constant.WEBDRIVER.findElement(bookHSBtn);
     }
 
-    public WebElement getBookSSBtn(){
+    protected WebElement getBookSSBtn(){
         return Constant.WEBDRIVER.findElement(bookSSBtn);
     }
 
-    public WebElement getBookSSCBtn(){
+    protected WebElement getBookSSCBtn(){
         return Constant.WEBDRIVER.findElement(booSSCBtn);
     }
 
-    public WebElement getBookHBBtn(){
+    protected WebElement getBookHBBtn(){
         return Constant.WEBDRIVER.findElement(bookHBBtn);
     }
 
-    public WebElement getBookSBBtn(){
+    protected WebElement getBookSBBtn(){
         return Constant.WEBDRIVER.findElement(bookSBBtn);
     }
 
-    public WebElement getBookSBCBtn(){
+    protected WebElement getBookSBCBtn(){
         return Constant.WEBDRIVER.findElement(bookSBCBtn);
     }
 

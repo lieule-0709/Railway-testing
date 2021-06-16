@@ -9,7 +9,7 @@ public class ContactPage extends GeneralPage{
     private final By linkEmail = By.xpath("//b[.=\"Email: \"]//following-sibling::a");
 
     //Elements
-    public WebElement getLinkEmail(){
+    protected WebElement getLinkEmail(){
         return Constant.WEBDRIVER.findElement(linkEmail);
     }
 

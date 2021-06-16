@@ -11,15 +11,15 @@ public class GeneralPage {
     private final By tabSelected = By.cssSelector(" #menu .selected");
 
     //Element
-    public WebElement getTabSelected() {
+    protected WebElement getTabSelected() {
         return Constant.WEBDRIVER.findElement(tabSelected);
     }
 
-    public WebElement getLbWelcome(){
+    protected WebElement getLbWelcome(){
         return Constant.WEBDRIVER.findElement(lbWelcome);
     }
 
-    public WebElement getTab(String name){
+    protected WebElement getTab(String name){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@id='menu']//a[.='" + name+ "']"));
     }
 

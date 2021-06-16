@@ -14,7 +14,6 @@ public class RegisterPage extends GeneralPage{
     private final By inputPID = By.xpath("//input[@id='pid']");
     private final By btnRegister = By.xpath("//input[@value='Register']");
     private final By pSuccess = By.xpath("//div[@id='content']/p");
-
     private final By errorMsg = By.cssSelector("..message");
     private final By errEmailLbl = By.xpath("//label[@for='email' and @class='validation-error']");
     private final By errPwdLbl = By.xpath("//label[@for='password' and @class='validation-error']");
@@ -23,53 +22,52 @@ public class RegisterPage extends GeneralPage{
 
 
     //Elements
-    public WebElement getInputEmail(){
+    protected WebElement getInputEmail(){
         return Constant.WEBDRIVER.findElement(inputEmail);
     }
 
-    public WebElement getInputPass(){
+    protected WebElement getInputPass(){
         return Constant.WEBDRIVER.findElement(inputPass);
     }
 
-    public WebElement getInputConfirmpass(){
+    protected WebElement getInputConfirmpass(){
         return Constant.WEBDRIVER.findElement(inputConfirmPass);
     }
 
-    public WebElement getInputPID(){
+    protected WebElement getInputPID(){
         return Constant.WEBDRIVER.findElement(inputPID);
     }
 
-    public WebElement getbtnRegister(){
+    protected WebElement getbtnRegister(){
         return Constant.WEBDRIVER.findElement(btnRegister);
     }
 
-    public WebElement getpSuccess(){
+    protected WebElement getpSuccess(){
         return Constant.WEBDRIVER.findElement(pSuccess);
     }
 
-    public WebElement getErrMsg(){
+    protected WebElement getErrMsg(){
         return Constant.WEBDRIVER.findElement(errorMsg);
     }
 
-    public WebElement getErrEmailLbl(){
+    protected WebElement getErrEmailLbl(){
         return Constant.WEBDRIVER.findElement(errEmailLbl);
     }
 
-    public WebElement getErrPwdLbl(){
+    protected WebElement getErrPwdLbl(){
         return Constant.WEBDRIVER.findElement(errPwdLbl);
     }
 
-    public WebElement getErrConfirmPwdLbl(){
+    protected WebElement getErrConfirmPwdLbl(){
         return Constant.WEBDRIVER.findElement(errConfirmPwdLbl);
     }
 
-    public WebElement getErrPIDLbl(){
+    protected WebElement getErrPIDLbl(){
         return Constant.WEBDRIVER.findElement(errPIDLbl);
     }
 
     //Methods
     public RegisterPage regist(String email, String pass, String confirmPass, String pid){
-
         this.getInputEmail().sendKeys(email);
         this.getInputPass().sendKeys(pass);
         this.getInputConfirmpass().sendKeys(confirmPass);
@@ -77,9 +75,8 @@ public class RegisterPage extends GeneralPage{
 
         JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
         js.executeScript("arguments[0].scrollIntoView(true);", this.getbtnRegister());
-
-        this.getbtnRegister().getLocation();
         this.getbtnRegister().click();
+
         return this;
     }
 

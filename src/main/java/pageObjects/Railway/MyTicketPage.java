@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 public class MyTicketPage extends GeneralPage {
 
     //Elements
-    public WebElement getOperationBtn(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String expiredDate, String status){
+    protected WebElement getOperationBtn(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String expiredDate, String status){
         return Constant.WEBDRIVER.findElement(By.xpath("//table[@class='MyTable']//td[contains(.,'" + departPlace +
                 "')]/following-sibling::td[contains(.,'"+ arrivePlace +
                 "')]/following-sibling::td[contains(.,'"+ seatType +
@@ -19,31 +19,31 @@ public class MyTicketPage extends GeneralPage {
                 "')]/following-sibling::td[contains(.,'"+ status + "')]/following-sibling::td/input"));
     }
 
-    public WebElement getErrFilterMsg(){
+    protected WebElement getErrFilterMsg(){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='error message']"));
     }
 
-    public WebElement getDepartStationCbx(){
+    protected WebElement getDepartStationCbx(){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='Filter']//select[@name='FilterDpStation']"));
     }
 
-    public WebElement getArriveStationCbx(){
+    protected WebElement getArriveStationCbx(){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='Filter']//select[@name='FilterArStation']"));
     }
 
-    public WebElement getDepartDateTxt(){
+    protected WebElement getDepartDateTxt(){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='Filter']//input[@name='FilterDpDate']"));
     }
 
-    public WebElement getStatusCbx(){
+    protected WebElement getStatusCbx(){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='Filter']//select[@name='FilterStatus']"));
     }
 
-    public WebElement getFilterBtn(){
+    protected WebElement getFilterBtn(){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='Filter']//input[@value='Apply Filter']"));
     }
 
-    public WebElement getFilterResultLbl(){
+    protected WebElement getFilterResultLbl(){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='Filter']//strong/span"));
     }
 

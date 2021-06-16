@@ -17,39 +17,39 @@ public class BookTicketSuccessPage extends GeneralPage {
     private final By totalPriceTd = By.xpath("//td[count(//th[.='Total Price']/preceding-sibling::th)+1]");
 
     //Elements
-    public WebElement getTitle(){
+    protected WebElement getTitle(){
         return Constant.WEBDRIVER.findElement(title);
     }
 
-    public WebElement getDepartStaionTd(){
+    protected WebElement getDepartStaionTd(){
         return Constant.WEBDRIVER.findElement(departStationTd);
     }
 
-    public WebElement getArriveStationTd(){
+    protected WebElement getArriveStationTd(){
         return Constant.WEBDRIVER.findElement(arriveStationTd);
     }
 
-    public WebElement getSeatTypeTd(){
+    protected WebElement getSeatTypeTd(){
         return Constant.WEBDRIVER.findElement(seatTypeTd);
     }
 
-    public WebElement getDepartDateTd(){
+    protected WebElement getDepartDateTd(){
         return Constant.WEBDRIVER.findElement(departDateTd);
     }
 
-    public WebElement getExpiredDateTd(){
+    protected WebElement getExpiredDateTd(){
         return Constant.WEBDRIVER.findElement(expiredDateTd);
     }
 
-    public WebElement getBookDateTd(){
+    protected WebElement getBookDateTd(){
         return Constant.WEBDRIVER.findElement(bookDateTd);
     }
 
-    public WebElement getAmountTd(){
+    protected WebElement getAmountTd(){
         return Constant.WEBDRIVER.findElement(amountTd);
     }
 
-    public WebElement getTotalPricetd(){
+    protected WebElement getTotalPricetd(){
         return Constant.WEBDRIVER.findElement(totalPriceTd);
     }
 

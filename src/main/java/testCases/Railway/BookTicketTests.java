@@ -11,37 +11,18 @@ import pageObjects.Railway.LoginPage;
 
 import java.util.concurrent.TimeUnit;
 
-public class BookTicketTests {
+public class BookTicketTests extends BaseTest {
 
-    HomePage homePage = new HomePage();
-
-    @BeforeClass
-    public void beforeClass(){
-        WebDriverManager.chromedriver().setup();
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
-
-    @AfterClass
-    public void afterClass(){
-        Constant.WEBDRIVER.quit();
-    }
+    private HomePage homePage = new HomePage();
+    private LoginPage loginPage;
+    private BookTicketPage bookTicketPage;
 
     @Test
     public void TC01() {
-
         homePage.open();
-
         LoginPage loginPage = homePage.navigateToLoginPage();
         loginPage.login(Constant.USERNAME, Constant.PASSWORD).getWelcomeMessage();
-
-        homePage.navigateToBookTicketPage();
-
-        BookTicketPage bookTicketPage= homePage.navigateToBookTicketPage();
-
+        bookTicketPage = homePage.navigateToBookTicketPage();
         bookTicketPage.bookTicket("6/29/2021", "Đà Nẵng", "Nha Trang", "Hard seat", "2");
-
-
     }
 }

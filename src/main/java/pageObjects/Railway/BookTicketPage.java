@@ -4,7 +4,6 @@ import common.constant.Constant;
 import common.utilities.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 public class BookTicketPage extends GeneralPage {
     //Locators
@@ -18,35 +17,35 @@ public class BookTicketPage extends GeneralPage {
     private final By errValidationMsg = By.xpath("//label[@class='validation-error']");
 
     //Elements
-    public WebElement getDepartDateCbx(){
+    protected WebElement getDepartDateCbx(){
         return Constant.WEBDRIVER.findElement(departDateCbx);
     }
 
-    public WebElement getDepartStationCbx(){
+    protected WebElement getDepartStationCbx(){
         return Constant.WEBDRIVER.findElement(departStationCbx);
     }
 
-    public WebElement getArriverStationCbx(){
+    protected WebElement getArriverStationCbx(){
         return Constant.WEBDRIVER.findElement(arriveStationCbx);
     }
 
-    public WebElement getSeatTypeCbx(){
+    protected WebElement getSeatTypeCbx(){
         return Constant.WEBDRIVER.findElement(seatTypeCbx);
     }
 
-    public WebElement getTicketAmountCbx(){
+    protected WebElement getTicketAmountCbx(){
         return Constant.WEBDRIVER.findElement(ticketAmountCbx);
     }
 
-    public WebElement getBookTicketBtn(){
+    protected WebElement getBookTicketBtn(){
         return Constant.WEBDRIVER.findElement(bookTicketBtn);
     }
 
-    public WebElement getErrMsg(){
+    protected WebElement getErrMsg(){
         return Constant.WEBDRIVER.findElement(errMsg);
     }
 
-    public WebElement getErrValidationMsg(){
+    protected WebElement getErrValidationMsg(){
         return Constant.WEBDRIVER.findElement(errValidationMsg);
     }
 

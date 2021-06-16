@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class TicketPriceListPage extends GeneralPage {
     //Elements
-    public WebElement getCheckPriceLink(String departPlace, String arrivePlace){
+    protected WebElement getCheckPriceLink(String departPlace, String arrivePlace){
         return Constant.WEBDRIVER.findElement(By.xpath("//tr//li[text()='" + departPlace + " to " + arrivePlace + "']/ancestor::tr//a"));
     }
 

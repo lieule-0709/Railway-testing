@@ -17,40 +17,39 @@ public class ChangePwdPage extends GeneralPage{
     private final By errConfirmPwdLbl = By.xpath("//label[@for='confirmPassword' and @class='validation-error']");
 
     //Elements
-
-    public WebElement getCurrentPwdInput(){
+    protected WebElement getCurrentPwdInput(){
         return Constant.WEBDRIVER.findElement(currentPwdInput);
     }
 
-    public WebElement getNewPwdInput(){
+    protected WebElement getNewPwdInput(){
         return Constant.WEBDRIVER.findElement(newPwdInput);
     }
 
-    public WebElement getConfirmPwdInput(){
+    protected WebElement getConfirmPwdInput(){
         return Constant.WEBDRIVER.findElement(confirmPwdInput);
     }
 
-    public WebElement getChangePwdBtn(){
+    protected WebElement getChangePwdBtn(){
         return Constant.WEBDRIVER.findElement(changePwdBtn);
     }
 
-    public WebElement getSuccessMsg(){
+    protected WebElement getSuccessMsg(){
         return Constant.WEBDRIVER.findElement(successMsg);
     }
 
-    public WebElement getErrorMsg(){
+    protected WebElement getErrorMsg(){
         return Constant.WEBDRIVER.findElement(errorMsg);
     }
 
-    public WebElement getErrCurrentPwdLbl(){
+    protected WebElement getErrCurrentPwdLbl(){
         return Constant.WEBDRIVER.findElement(errCurrentPwdLbl);
     }
 
-    public WebElement getErrNewPwdLbl(){
+    protected WebElement getErrNewPwdLbl(){
         return Constant.WEBDRIVER.findElement(errNewPwdLbl);
     }
 
-    public WebElement getErrConfirmPwdLbl(){
+    protected WebElement getErrConfirmPwdLbl(){
         return Constant.WEBDRIVER.findElement(errConfirmPwdLbl);
     }
 

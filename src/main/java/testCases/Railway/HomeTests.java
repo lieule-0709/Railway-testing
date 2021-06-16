@@ -10,20 +10,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 
-public class HomeTests {
+public class HomeTests extends BaseTest{
 
     HomePage homePage = new HomePage();
-
-    @BeforeClass
-    public void beforeClass(){
-        WebDriverManager.chromedriver().setup();
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
-    @AfterClass
-    public void afterClass(){
-        Constant.WEBDRIVER.quit();
-    }
 
     @Test
     public void TC02(){
@@ -63,9 +52,7 @@ public class HomeTests {
         verifyTitle = Constant.WEBDRIVER.getTitle().indexOf("Login")!=-1;
         Assert.assertTrue(verifyTitle);
         Assert.assertEquals(homePage.getTextOfSelectedTab(), "Login", "Selected tab is not correct");
-
     }
-
 
     @Test
     public void TC04(){
@@ -76,4 +63,5 @@ public class HomeTests {
         Assert.assertTrue(verifyTitle);
         Assert.assertEquals(homePage.getTextOfSelectedTab(), "Register", "Selected tab is not correct");
     }
+
 }

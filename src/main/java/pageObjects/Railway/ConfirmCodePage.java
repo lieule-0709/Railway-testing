@@ -11,11 +11,11 @@ public class ConfirmCodePage extends GeneralPage {
     private final By confirmBtn = By.xpath("//input[@value='Confirm']");
 
     //Elements
-    public WebElement getCodeInput(){
+    protected WebElement getCodeInput(){
         return Constant.WEBDRIVER.findElement(codeInput);
     }
 
-    public WebElement getConfirmBtn(){
+    protected WebElement getConfirmBtn(){
         return Constant.WEBDRIVER.findElement(confirmBtn);
     }
 

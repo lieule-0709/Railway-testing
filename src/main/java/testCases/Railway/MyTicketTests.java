@@ -13,33 +13,19 @@ import pageObjects.Railway.MyTicketPage;
 
 import java.util.concurrent.TimeUnit;
 
-public class MyTicketTests {
+public class MyTicketTests extends BaseTest{
 
-    HomePage homePage = new HomePage();
-
-    @BeforeClass
-    public void beforeClass(){
-        WebDriverManager.chromedriver().setup();
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
-
-    @AfterClass
-    public void afterClass(){
-//        Constant.WEBDRIVER.quit();
-    }
+    private HomePage homePage = new HomePage();
+    private LoginPage loginPage;
+    private MyTicketPage myTicketPage;
 
     @Test
     public void TC01() {
-
         homePage.open();
-        LoginPage loginPage = homePage.navigateToLoginPage();
+        loginPage = homePage.navigateToLoginPage();
         loginPage.login(Constant.USERNAME, Constant.PASSWORD).getWelcomeMessage();
-
-        MyTicketPage myTicketPage = homePage.navigateToMyTicketPage();
-
+        myTicketPage = homePage.navigateToMyTicketPage();
         myTicketPage.cancelTicket("Đà Nẵng", "Sài Gòngit", "", "", "", "", "New");
-
     }
+
 }

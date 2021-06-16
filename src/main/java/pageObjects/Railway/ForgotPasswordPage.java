@@ -11,15 +11,15 @@ public class ForgotPasswordPage extends GeneralPage{
     private final By errValidationMsg = By.cssSelector(".validation-error");
 
     //Elements
-    public WebElement getEmailInput(){
+    protected WebElement getEmailInput(){
         return Constant.WEBDRIVER.findElement(emailInput);
     }
 
-    public WebElement getSendBtn(){
+    protected WebElement getSendBtn(){
         return Constant.WEBDRIVER.findElement(sendBtn);
     }
 
-    public WebElement getErrValidationMsg(){
+    protected WebElement getErrValidationMsg(){
         return Constant.WEBDRIVER.findElement(errValidationMsg);
     }
 

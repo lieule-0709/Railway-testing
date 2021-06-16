@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends GeneralPage {
     //Locators
-    private final By _txtUserName = By.cssSelector("#username");
-    private final By _txtPassword = By.cssSelector("#password");
-    private final By _btnLogin = By.xpath("//input[@value='Login']");
+    private final By userNameInput = By.cssSelector("#username");
+    private final By passwordInput = By.cssSelector("#password");
+    private final By loginBtn = By.xpath("//input[@value='Login']");
     private final By registerLink = By.xpath("//a[.='Registration Page']");
     private final By forgotPwdLink = By.xpath("//a[.='Forgot Password page']");
 
@@ -18,35 +18,35 @@ public class LoginPage extends GeneralPage {
 
 
     //Elements
-    public WebElement getTxtUsername() {
-        return Constant.WEBDRIVER.findElement(_txtUserName);
+    protected WebElement getTxtUsername() {
+        return Constant.WEBDRIVER.findElement(userNameInput);
     }
 
-    public WebElement getTxtPassword() {
-        return Constant.WEBDRIVER.findElement(_txtPassword);
+    protected WebElement getTxtPassword() {
+        return Constant.WEBDRIVER.findElement(passwordInput);
     }
 
-    public WebElement getBtnLogin() {
-        return Constant.WEBDRIVER.findElement(_btnLogin);
+    protected WebElement getBtnLogin() {
+        return Constant.WEBDRIVER.findElement(loginBtn);
     }
 
-    public WebElement getRegisterLink(){
+    protected WebElement getRegisterLink(){
         return Constant.WEBDRIVER.findElement(registerLink);
     }
 
-    public WebElement getForgotPwdLink(){
+    protected WebElement getForgotPwdLink(){
         return Constant.WEBDRIVER.findElement(forgotPwdLink);
     }
 
-    public WebElement getErrMsg() {
+    protected WebElement getErrMsg() {
         return Constant.WEBDRIVER.findElement(errorMsg);
     }
 
-    public WebElement getErrEmailLbl() {
+    protected WebElement getErrEmailLbl() {
         return Constant.WEBDRIVER.findElement(errEmailLbl);
     }
 
-    public WebElement getErrPwdLbl() {
+    protected WebElement getErrPwdLbl() {
         return Constant.WEBDRIVER.findElement(errPwdLbl);
     }
 

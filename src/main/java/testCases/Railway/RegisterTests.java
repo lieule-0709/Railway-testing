@@ -12,24 +12,15 @@ import pageObjects.Railway.GeneralPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.RegisterPage;
 
-public class RegisterTests extends GeneralPage {
-
-    @BeforeClass
-    public void beforeClass(){
-        WebDriverManager.chromedriver().setup();
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
-    @AfterClass
-    public void afterClass(){
-        Constant.WEBDRIVER.quit();
-    }
+public class RegisterTests extends BaseTest {
+    private HomePage homePage = new HomePage();
+    private RegisterPage registerPage;
 
     @Test
     public void TC07(){
-        HomePage homePage = new HomePage();
+        homePage = new HomePage();
         homePage.open();
-        RegisterPage registerPage = homePage.navigateToRegisterPage();
+        registerPage = homePage.navigateToRegisterPage();
         registerPage.regist("email"+ (int)(Math.random() * 10000 + 10000) + "@gmail.com", "123456789", "123456789", "123456789");
         String actualMsg = registerPage.getMsgSuccess();
         String expectedMsg = "Registration Confirmed! You can now log in to the site.";

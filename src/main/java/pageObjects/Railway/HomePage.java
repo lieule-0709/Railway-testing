@@ -10,7 +10,7 @@ public class HomePage extends GeneralPage {
     private final By createAccountLink = By.xpath("//a[@href= '/Account/Register.cshtml']");
 
     //Element
-    public WebElement getCreateAccountLink(){
+    protected WebElement getCreateAccountLink(){
         return Constant.WEBDRIVER.findElement(createAccountLink);
     }
 

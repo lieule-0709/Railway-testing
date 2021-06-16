@@ -13,25 +13,15 @@ import pageObjects.Railway.TimeTablePage;
 
 import java.util.concurrent.TimeUnit;
 
-public class TimetableTests {
-    @BeforeMethod
-    public void beforeMethod(){
-        WebDriverManager.chromedriver().setup();
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
+public class TimetableTests extends BaseTest {
 
-    @AfterMethod
-    public void afterMethod(){
-        Constant.WEBDRIVER.quit();
-    }
+    private HomePage homePage = new HomePage();
+    private TimeTablePage timeTablePage;
 
     @Test
     public void TC01() {
-        HomePage homePage = new HomePage();
         homePage.open();
-        TimeTablePage timeTablePage = homePage.navigateToTimeTablePage();
+        timeTablePage = homePage.navigateToTimeTablePage();
         timeTablePage.goToBookTicketpage("Sài Gòn", "Huế");
     }
 }

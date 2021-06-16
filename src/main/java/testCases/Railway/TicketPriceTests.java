@@ -12,33 +12,19 @@ import pageObjects.Railway.TicketPricePage;
 
 import java.util.concurrent.TimeUnit;
 
-public class TicketPriceTests {
+public class TicketPriceTests extends BaseTest {
 
-    @BeforeClass
-    public void beforeClass(){
-        WebDriverManager.chromedriver().setup();
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
-
-    @AfterClass
-    public void afterClass(){
-        Constant.WEBDRIVER.quit();
-    }
+    private HomePage homePage = new HomePage();
+    private LoginPage loginPage;
+    private TicketPriceListPage ticketPriceListPage;
 
     @Test
     public void TC01() {
-        HomePage homePage = new HomePage();
         homePage.open();
-
-        LoginPage loginPage = homePage.navigateToLoginPage();
+        loginPage = homePage.navigateToLoginPage();
         loginPage.login(Constant.USERNAME, Constant.PASSWORD).getWelcomeMessage();
-
-        TicketPriceListPage ticketPriceListPage = homePage.navigateToTicketPriceListPage();
-
+        ticketPriceListPage = homePage.navigateToTicketPriceListPage();
         ticketPriceListPage.goToCheckPricePage("Quảng Ngãi", "Huế");
-
     }
 
 }
