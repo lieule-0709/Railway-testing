@@ -27,7 +27,7 @@ public class MyTicketTests extends BaseTest{
         loginPage = homePage.navigateToLoginPage();
         loginPage.login(Constant.USERNAME, Constant.PASSWORD).getWelcomeMessage();
         myTicketPage = homePage.navigateToMyTicketPage();
-        myTicketPage.cancelTicket(Stations.SAI_GON, Stations.PHAN_THIET, "", "", "", "", "New");
+        myTicketPage.cancelTicket(Stations.SAI_GON, Stations.NHA_TRANG, "", "", "", "", "New");
     }
 
 }

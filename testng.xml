@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test all test cases">
+<!--    parallel="tests" thread-count="2"-->
+    <test verbose="2" preserve-order="true" name="Test on Chrome">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.Railway.BookTicketTests">
+                <methods>
+                    <include name="TC14"/>
+                    <include name="TC15"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.ChangePasswordTest">
+                <methods>
+                    <include name="TC09"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.GoToPageTests">
+                <methods>
+                    <include name="TC04"/>
+                    <include name="TC06"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.LoginTest">
+                <methods>
+                    <include name="TC01"/>
+                    <include name="TC02"/>
+                    <include name="TC03"/>
+                    <include name="TC05"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.MyTicketTests">
+                <methods>
+                    <include name="TC16"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.RegisterTests">
+                <methods>
+                    <include name="TC07"/>
+                    <include name="TC10"/>
+                    <include name="TC11"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Test on FireFox">
+        <parameter name="browserName" value="firefox"></parameter>
+        <classes>
+            <class name="testCases.Railway.BookTicketTests">
+                <methods>
+                    <include name="TC14"/>
+                    <include name="TC15"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.ChangePasswordTest">
+                <methods>
+                    <include name="TC09"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.GoToPageTests">
+                <methods>
+                    <include name="TC04"/>
+                    <include name="TC06"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.LoginTest">
+                <methods>
+                    <include name="TC01"/>
+                    <include name="TC02"/>
+                    <include name="TC03"/>
+                    <include name="TC05"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.MyTicketTests">
+                <methods>
+                    <include name="TC16"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.RegisterTests">
+                <methods>
+                    <include name="TC07"/>
+                    <include name="TC10"/>
+                    <include name="TC11"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Test on Edge">
+        <parameter name="browserName" value="edge"></parameter>
+        <classes>
+            <class name="testCases.Railway.BookTicketTests">
+                <methods>
+                    <include name="TC14"/>
+                    <include name="TC15"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.ChangePasswordTest">
+                <methods>
+                    <include name="TC09"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.GoToPageTests">
+                <methods>
+                    <include name="TC04"/>
+                    <include name="TC06"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.LoginTest">
+                <methods>
+                    <include name="TC01"/>
+                    <include name="TC02"/>
+                    <include name="TC03"/>
+                    <include name="TC05"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.MyTicketTests">
+                <methods>
+                    <include name="TC16"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.RegisterTests">
+                <methods>
+                    <include name="TC07"/>
+                    <include name="TC10"/>
+                    <include name="TC11"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

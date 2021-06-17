@@ -14,7 +14,7 @@ public class RegisterPage extends GeneralPage{
     private final By inputPID = By.xpath("//input[@id='pid']");
     private final By btnRegister = By.xpath("//input[@value='Register']");
     private final By successMsg = By.xpath("//div[@id='content']/p");
-    private final By errorMsg = By.cssSelector("..message");
+    private final By errorMsg = By.cssSelector(".message");
     private final By errEmailLbl = By.xpath("//label[@for='email' and @class='validation-error']");
     private final By errPwdLbl = By.xpath("//label[@for='password' and @class='validation-error']");
     private final By errConfirmPwdLbl = By.xpath("//label[@for='confirmPassword' and @class='validation-error']");
