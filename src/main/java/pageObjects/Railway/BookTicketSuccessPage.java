@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class BookTicketSuccessPage extends GeneralPage {
     //Locators
-    private final By title = new By.ByCssSelector("#content h1");
+    private final By successMsg = new By.ByCssSelector("#content h1");
     private final By departStationTd = By.xpath("//td[count(//th[.='Depart Station']/preceding-sibling::th)+1]");
     private final By arriveStationTd = By.xpath("//td[count(//th[.='Arrive Station']/preceding-sibling::th)+1]");
     private final By seatTypeTd = By.xpath("//td[count(//th[.='Seat Type']/preceding-sibling::th)+1]");
@@ -17,8 +17,8 @@ public class BookTicketSuccessPage extends GeneralPage {
     private final By totalPriceTd = By.xpath("//td[count(//th[.='Total Price']/preceding-sibling::th)+1]");
 
     //Elements
-    protected WebElement getTitle(){
-        return Constant.WEBDRIVER.findElement(title);
+    protected WebElement getSuccessMsg(){
+        return Constant.WEBDRIVER.findElement(successMsg);
     }
 
     protected WebElement getDepartStaionTd(){
@@ -51,6 +51,31 @@ public class BookTicketSuccessPage extends GeneralPage {
 
     protected WebElement getTotalPricetd(){
         return Constant.WEBDRIVER.findElement(totalPriceTd);
+    }
+
+    //Methods
+    public String getSuccessMsgText(){
+        return this.getSuccessMsg().getText();
+    }
+
+    public String getDepartStation(){
+        return this.getDepartStaionTd().getText();
+    }
+
+    public String getArriveStation(){
+        return this.getArriveStationTd().getText();
+    }
+
+    public String getSeatType(){
+        return this.getSeatTypeTd().getText();
+    }
+
+    public String getDepartDate(){
+        return this.getDepartDateTd().getText();
+    }
+
+    public String getAmount(){
+        return this.getAmountTd().getText();
     }
 
 }

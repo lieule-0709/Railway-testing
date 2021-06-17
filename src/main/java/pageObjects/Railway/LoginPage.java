@@ -2,6 +2,7 @@ package pageObjects.Railway;
 
 import common.constant.Constant;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends GeneralPage {
@@ -52,8 +53,13 @@ public class LoginPage extends GeneralPage {
 
     //Methods
     public HomePage login(String username, String password) {
+        this.getTxtUsername().clear();
         this.getTxtUsername().sendKeys(username);
+        this.getTxtPassword().clear();
         this.getTxtPassword().sendKeys(password);
+
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", this.getBtnLogin());
         this.getBtnLogin().click();
         return new HomePage();
     }
@@ -66,6 +72,18 @@ public class LoginPage extends GeneralPage {
     public ForgotPasswordPage clickForgotPwdLink(){
         this.getForgotPwdLink().click();
         return new ForgotPasswordPage();
+    }
+
+    public String getErrMsgText(){
+        return this.getErrMsg().getText();
+    }
+
+    public String getErrEmailMsg(){
+        return this.getErrEmailLbl().getText();
+    }
+
+    public String getErrPwdMsg(){
+        return this.getErrPwdLbl().getText();
     }
 
 }

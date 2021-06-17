@@ -1,8 +1,10 @@
 package pageObjects.Railway;
 
 import common.constant.Constant;
+import dataObjects.Tabs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class GeneralPage {
 
@@ -19,62 +21,67 @@ public class GeneralPage {
         return Constant.WEBDRIVER.findElement(lbWelcome);
     }
 
-    protected WebElement getTab(String name){
+    //Methods
+    public WebElement getTab(String name){
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@id='menu']//a[.='" + name+ "']"));
     }
 
-    //Methods
     public String getWelcomeMessage(){
         return this.getLbWelcome().getText();
     }
 
     public LoginPage navigateToLoginPage(){
-        this.getTab("Login").click();
+        this.getTab(Tabs.LOGIN).click();
         return new LoginPage();
     }
 
     public HomePage navigateToHomePage(){
-        this.getTab("Home").click();
+        this.getTab(Tabs.HOME).click();
         return new HomePage();
     }
 
     public FAQPage navigateToFAQPage(){
-        this.getTab("FAQ").click();
+        this.getTab(Tabs.FAQ).click();
         return new FAQPage();
     }
 
     public ContactPage navigateToContactPage(){
-        this.getTab("Contact").click();
+        this.getTab(Tabs.CONTACT).click();
         return new ContactPage();
     }
 
     public TimeTablePage navigateToTimeTablePage(){
-        this.getTab("Timetable").click();
+        this.getTab(Tabs.TIME_TABLE).click();
         return new TimeTablePage();
     }
 
     public TicketPriceListPage navigateToTicketPriceListPage(){
-        this.getTab("Ticket price").click();
+        this.getTab(Tabs.TICKET_PRICE).click();
         return new TicketPriceListPage();
     }
 
     public BookTicketPage navigateToBookTicketPage(){
-        this.getTab("Book ticket").click();
+        this.getTab(Tabs.BOOK_TICKET).click();
         return new BookTicketPage();
     }
 
     public RegisterPage navigateToRegisterPage(){
-        this.getTab("Register").click();
+        this.getTab(Tabs.REGISTER).click();
         return new RegisterPage();
     }
 
     public MyTicketPage navigateToMyTicketPage(){
-        this.getTab("My ticket").click();
+        this.getTab(Tabs.MY_TICKET).click();
         return new MyTicketPage();
     }
 
+    public ChangePwdPage navigateToChangePwdPage(){
+        this.getTab(Tabs.CHANGE_PASSWORD).click();
+        return new ChangePwdPage();
+    }
+
     public void navigateToLogoutPage(){
-        this.getTab("Log out").click();
+        this.getTab(Tabs.LOGOUT).click();
     }
 
     public String getTextOfSelectedTab(){

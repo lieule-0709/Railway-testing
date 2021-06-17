@@ -1,6 +1,7 @@
 package testCases.Railway;
 
 import common.constant.Constant;
+import dataObjects.Stations;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -20,12 +21,13 @@ public class MyTicketTests extends BaseTest{
     private MyTicketPage myTicketPage;
 
     @Test
-    public void TC01() {
+    public void TC16() {
+        System.out.println("User can cancel a ticket");
         homePage.open();
         loginPage = homePage.navigateToLoginPage();
         loginPage.login(Constant.USERNAME, Constant.PASSWORD).getWelcomeMessage();
         myTicketPage = homePage.navigateToMyTicketPage();
-        myTicketPage.cancelTicket("Đà Nẵng", "Sài Gòngit", "", "", "", "", "New");
+        myTicketPage.cancelTicket(Stations.SAI_GON, Stations.PHAN_THIET, "", "", "", "", "New");
     }
 
 }

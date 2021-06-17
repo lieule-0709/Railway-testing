@@ -13,7 +13,7 @@ public class RegisterPage extends GeneralPage{
     private final By inputConfirmPass = By.xpath("//input[@id='confirmPassword']");
     private final By inputPID = By.xpath("//input[@id='pid']");
     private final By btnRegister = By.xpath("//input[@value='Register']");
-    private final By pSuccess = By.xpath("//div[@id='content']/p");
+    private final By successMsg = By.xpath("//div[@id='content']/p");
     private final By errorMsg = By.cssSelector("..message");
     private final By errEmailLbl = By.xpath("//label[@for='email' and @class='validation-error']");
     private final By errPwdLbl = By.xpath("//label[@for='password' and @class='validation-error']");
@@ -42,8 +42,8 @@ public class RegisterPage extends GeneralPage{
         return Constant.WEBDRIVER.findElement(btnRegister);
     }
 
-    protected WebElement getpSuccess(){
-        return Constant.WEBDRIVER.findElement(pSuccess);
+    protected WebElement getSuccessMsg(){
+        return Constant.WEBDRIVER.findElement(successMsg);
     }
 
     protected WebElement getErrMsg(){
@@ -80,7 +80,28 @@ public class RegisterPage extends GeneralPage{
         return this;
     }
 
-    public String getMsgSuccess(){
-        return this.getpSuccess().getText();
+    public String getSuccessMsgText(){
+        return this.getSuccessMsg().getText();
     }
+
+    public String getErrMsgText(){
+        return this.getErrMsg().getText();
+    }
+
+    public String getErrEmailLblText(){
+        return this.getErrEmailLbl().getText();
+    }
+
+    public String getErrPwdLblText(){
+        return this.getErrPwdLbl().getText();
+    }
+
+    public String getErrConfirmPwdLblText(){
+        return this.getErrConfirmPwdLbl().getText();
+    }
+
+    public String getErrPIDLblText(){
+        return this.getErrPIDLbl().getText();
+    }
+
 }

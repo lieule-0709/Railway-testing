@@ -2,6 +2,7 @@ package pageObjects.Railway;
 
 import common.constant.Constant;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class ChangePwdPage extends GeneralPage{
@@ -58,6 +59,18 @@ public class ChangePwdPage extends GeneralPage{
         this.getCurrentPwdInput().sendKeys(currentPwd);
         this.getNewPwdInput().sendKeys(newPwd);
         this.getConfirmPwdInput().sendKeys(confirmPwd);
+
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", this.getChangePwdBtn());
         this.getChangePwdBtn().click();
     }
+
+    public String getSuccessMsgText(){
+        return this.getSuccessMsg().getText();
+    }
+
+    public String getErrMsgText(){
+        return this.getErrorMsg().getText();
+    }
+
 }

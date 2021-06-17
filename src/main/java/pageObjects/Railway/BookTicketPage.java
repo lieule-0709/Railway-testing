@@ -3,7 +3,9 @@ package pageObjects.Railway;
 import common.constant.Constant;
 import common.utilities.Utilities;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class BookTicketPage extends GeneralPage {
     //Locators
@@ -50,14 +52,42 @@ public class BookTicketPage extends GeneralPage {
     }
 
     //Methods
-    public BookTicketSuccessPage bookTicket(String departDate, String departPlace, String arrivePlace, String seatType, String amount){
+    public void bookTicket(String departDate, String departPlace, String arrivePlace, String seatType, String amount){
         Utilities.selectOption(this.getDepartDateCbx(), departDate);
         Utilities.selectOption(this.getDepartStationCbx(), departPlace);
         Utilities.selectOption(this.getArriverStationCbx(), arrivePlace);
         Utilities.selectOption(this.getSeatTypeCbx(), seatType);
         Utilities.selectOption(this.getTicketAmountCbx(), amount);
+
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", this.getBookTicketBtn());
+
         this.getBookTicketBtn().click();
-        return new BookTicketSuccessPage();
+    }
+
+    public String getDepartStation(){
+        Select select = new Select(Constant.WEBDRIVER.findElement(departStationCbx));
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public String getArriveStation(){
+        Select select = new Select(Constant.WEBDRIVER.findElement(arriveStationCbx));
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public String getSeatType(){
+        Select select = new Select(Constant.WEBDRIVER.findElement(seatTypeCbx));
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public String getDepartDate(){
+        Select select = new Select(Constant.WEBDRIVER.findElement(departDateCbx));
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public String getAmount(){
+        Select select = new Select(Constant.WEBDRIVER.findElement(departStationCbx));
+        return select.getFirstSelectedOption().getText();
     }
 
 }
