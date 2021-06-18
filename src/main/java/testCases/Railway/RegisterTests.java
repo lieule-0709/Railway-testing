@@ -5,13 +5,19 @@ import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.RegisterPage;
 
+import java.lang.reflect.Method;
+
+import static common.utilities.extentReports.ExtentTestManger.startTest;
+
 public class RegisterTests extends BaseTest {
     private HomePage homePage = new HomePage();
     private RegisterPage registerPage;
 
-    @Test
-    public void TC07() {
-        System.out.println("User can create new account");
+    @Test(description = "User can create new account")
+    public void TC07(Method method) {
+        startTest(method.getName(), "User can create new account");
+
+        System.out.println("");
         homePage = new HomePage();
         homePage.open();
         registerPage = homePage.navigateToRegisterPage();
@@ -21,9 +27,10 @@ public class RegisterTests extends BaseTest {
         Assert.assertEquals(actualMsg, expectedMsg, "the success Msg is displayed not correctly");
     }
 
-    @Test
-    public void TC10() {
-        System.out.println("User can't create account with \"Confirm password\" is not the same with \"Password\"");
+    @Test(description = "User can't create account with \"Confirm password\" is not the same with \"Password\"")
+    public void TC10(Method method) {
+        startTest(method.getName(), "User can't create account with \"Confirm password\" is not the same with \"Password\"");
+
         homePage = new HomePage();
         homePage.open();
         registerPage = homePage.navigateToRegisterPage();
@@ -34,9 +41,10 @@ public class RegisterTests extends BaseTest {
         Assert.assertEquals(actualMsg, expectedMsg, "the error message is displayed not correct");
     }
 
-    @Test
-    public void TC11() {
-        System.out.println("User can't create account while password and PID fields are empty");
+    @Test(description = "User can't create account while password and PID fields are empty")
+    public void TC11(Method method) {
+        startTest(method.getName(), "User can't create account while password and PID fields are empty");
+
         homePage = new HomePage();
         homePage.open();
         registerPage = homePage.navigateToRegisterPage();

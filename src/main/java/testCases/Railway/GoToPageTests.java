@@ -7,14 +7,19 @@ import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 
+import java.lang.reflect.Method;
+
+import static common.utilities.extentReports.ExtentTestManger.startTest;
+
 public class GoToPageTests extends BaseTest {
 
     private HomePage homePage = new HomePage();
     private LoginPage loginPage = new LoginPage();
 
-    @Test
-    public void TC04() {
-        System.out.println("Login page displays when un-logged User clicks on \"Book ticket\" tab");
+    @Test(description = "Login page displays when un-logged User clicks on \"Book ticket\" tab")
+    public void TC04(Method method) {
+        startTest(method.getName(), "Login page displays when un-logged User clicks on \"Book ticket\" tab");
+
         homePage.open();
         homePage.navigateToBookTicketPage();
         Boolean verifyTitle = Constant.WEBDRIVER.getTitle().indexOf("Login") != -1;
@@ -22,8 +27,10 @@ public class GoToPageTests extends BaseTest {
         Assert.assertEquals(homePage.getTextOfSelectedTab(), "Login", "Selected tab is not correct");
     }
 
-    @Test
-    public void TC06() {
+    @Test(description = "Additional pages display once user logged in")
+    public void TC06(Method method) {
+        startTest(method.getName(), "Additional pages display once user logged in");
+
         loginPage.login("thanhle@logigear.com", "12345678");
         Assert.assertNotNull(homePage.getTab("My ticket"));
         Assert.assertNotNull(homePage.getTab("Change password"));

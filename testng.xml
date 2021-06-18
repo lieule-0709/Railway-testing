@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test all test cases">
-<!--    parallel="tests" thread-count="2"-->
+<suite name="All Test Suite" parallel="tests" thread-count="3">
+
+    <parameter name="browserName" value="chrome"></parameter>
+
+    <listeners>
+        <listener class-name="common.utilities.listeners.TestListener"/>
+        <listener class-name="common.utilities.listeners.AnnotationTransformer"/>
+    </listeners>
+
     <test verbose="2" preserve-order="true" name="Test on Chrome">
         <parameter name="browserName" value="chrome"></parameter>
         <classes>
