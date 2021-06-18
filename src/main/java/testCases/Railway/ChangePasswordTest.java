@@ -24,8 +24,6 @@ public class ChangePasswordTest extends BaseTest{
 
         String actual = changePwdPage.getSuccessMsgText();
         String expected =  "Your password has been updated";
-
         Assert.assertEquals(actual, expected, "Message is not correct");
     }
-
 }

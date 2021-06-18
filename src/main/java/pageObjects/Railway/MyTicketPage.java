@@ -9,14 +9,14 @@ import org.openqa.selenium.WebElement;
 public class MyTicketPage extends GeneralPage {
 
     //Elements
-    protected WebElement getOperationBtn(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String expiredDate, String status){
+    protected WebElement getOperationBtn(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String status, String amount){
         return Constant.WEBDRIVER.findElement(By.xpath("//table[@class='MyTable']//td[contains(.,'" + departPlace +
                 "')]/following-sibling::td[contains(.,'"+ arrivePlace +
                 "')]/following-sibling::td[contains(.,'"+ seatType +
                 "')]/following-sibling::td[contains(.,'"+ departDate +
                 "')]/following-sibling::td[contains(.,'"+ bookDate +
-                "')]/following-sibling::td[contains(.,'"+ expiredDate +
-                "')]/following-sibling::td[contains(.,'"+ status + "')]/following-sibling::td/input"));
+                "')]/following-sibling::td[contains(.,'"+ status +
+                "')]/following-sibling::td[contains(.,'"+ amount + "')]/following-sibling::td/input"));
     }
 
     protected WebElement getErrFilterMsg(){
@@ -49,8 +49,8 @@ public class MyTicketPage extends GeneralPage {
 
 
     //Methods
-    public void cancelTicket(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String expiredDate, String status){
-        WebElement btn = this.getOperationBtn(departPlace,arrivePlace, seatType, departDate, bookDate,expiredDate,status);
+    public void cancelTicket(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String status, String amount){
+        WebElement btn = this.getOperationBtn(departPlace,arrivePlace, seatType, departDate, bookDate,status,amount);
 
         JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
         js.executeScript("arguments[0].scrollIntoView(true);", btn);
@@ -66,4 +66,16 @@ public class MyTicketPage extends GeneralPage {
         Utilities.selectOption(this.getStatusCbx(), status);
         this.getFilterBtn().click();
     }
+
+    public int countRowsFitInfo(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String status, String amount){
+        int iCount = Constant.WEBDRIVER.findElements(By.xpath("//table[@class='MyTable']//td[contains(.,'" + departPlace +
+                    "')]/following-sibling::td[contains(.,'"+ arrivePlace +
+                    "')]/following-sibling::td[contains(.,'"+ seatType +
+                    "')]/following-sibling::td[contains(.,'"+ departDate +
+                    "')]/following-sibling::td[contains(.,'"+ bookDate +
+                    "')]/following-sibling::td[contains(.,'"+ status +
+                    "')]/following-sibling::td[contains(.,'"+ amount + "')]/following-sibling::td/input")).size();
+        return iCount;
+    }
+
 }

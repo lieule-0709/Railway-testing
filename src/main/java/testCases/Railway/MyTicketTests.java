@@ -2,17 +2,12 @@ package testCases.Railway;
 
 import common.constant.Constant;
 import dataObjects.Stations;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObjects.Railway.BookTicketPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 import pageObjects.Railway.MyTicketPage;
 
-import java.util.concurrent.TimeUnit;
 
 public class MyTicketTests extends BaseTest{
 
@@ -27,7 +22,12 @@ public class MyTicketTests extends BaseTest{
         loginPage = homePage.navigateToLoginPage();
         loginPage.login(Constant.USERNAME, Constant.PASSWORD).getWelcomeMessage();
         myTicketPage = homePage.navigateToMyTicketPage();
-        myTicketPage.cancelTicket(Stations.SAI_GON, Stations.NHA_TRANG, "", "", "", "", "New");
-    }
 
+        int countRowsBefore = myTicketPage.countRowsFitInfo(Stations.SAI_GON, Stations.NHA_TRANG, "", "", "", "New", "1");
+        myTicketPage.cancelTicket(Stations.SAI_GON, Stations.NHA_TRANG, "", "", "", "New", "1");
+
+        int countRowsAfter = myTicketPage.countRowsFitInfo(Stations.SAI_GON, Stations.NHA_TRANG, "", "", "", "New", "1");
+
+        Assert.assertEquals(countRowsAfter, countRowsBefore-1, "Cancel ticket failed");
+    }
 }

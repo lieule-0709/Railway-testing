@@ -18,7 +18,6 @@ public class LoginTest extends BaseTest{
         System.out.println("User can log into Railway with valid username and password");
         homePage.open();
         Object[][] data = Utilities.readCSVData(Constant.DATA_LOGIN_PATH);
-        
         for(int i=0; i< data.length; i++){
             loginPage = homePage.navigateToLoginPage();
             String actualMsg = loginPage.login(data[i][0]+"", data[i][1]+"").getWelcomeMessage();
@@ -52,13 +51,13 @@ public class LoginTest extends BaseTest{
     public void TC05() throws Exception {
         System.out.println("System shows message when user enters wrong password several times");
         loginPage = homePage.navigateToLoginPage();
-        loginPage.login( "abc@xyz.com", "87654321");
-        loginPage.login( "abc@xyz.com", "87654321");
-        loginPage.login( "abc@xyz.com", "87654321");
-        loginPage.login( "abc@xyz.com", "87654321");
+
+        for(int i=0; i<4; i++){
+            loginPage.login( "abc@xyz.com", "87654321");
+        }
+
         String actualMsg = loginPage.getErrMsgText();
         String expectedMsg = "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.";
         Assert.assertEquals(actualMsg, expectedMsg, "error message is not correctly");
     }
-
 }

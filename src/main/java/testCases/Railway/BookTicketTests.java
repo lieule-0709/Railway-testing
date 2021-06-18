@@ -4,7 +4,7 @@ import common.constant.Constant;
 import dataObjects.SeatTypes;
 import dataObjects.Stations;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 import pageObjects.Railway.*;
 
 public class BookTicketTests extends BaseTest {
@@ -47,14 +47,13 @@ public class BookTicketTests extends BaseTest {
         actual = bookTicketSuccessPage.getAmount();
         expected = "1";
         Assert.assertEquals(actual, expected, "Ticket amount is not correct");
-
     }
 
     @Test
-    public void TC15(){
+    public void TC15() {
         System.out.println("User can open \"Book ticket\" page by clicking on \"Book ticket\" link in \"Train timetable\" page");
         timeTablePage = homePage.navigateToTimeTablePage();
-        bookTicketPage = timeTablePage.goToBookTicketpage( Stations.HUE, Stations.SAI_GON);
+        bookTicketPage = timeTablePage.goToBookTicketpage(Stations.HUE, Stations.SAI_GON);
 
         String actual = bookTicketPage.getDepartStation();
         String expected = Stations.HUE;
@@ -64,5 +63,4 @@ public class BookTicketTests extends BaseTest {
         expected = Stations.SAI_GON;
         Assert.assertEquals(actual, expected, "Arrive station is not correct");
     }
-
 }
