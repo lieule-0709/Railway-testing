@@ -6,14 +6,20 @@ import pageObjects.Railway.ChangePwdPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 
+import java.lang.reflect.Method;
+
+import static common.utilities.extentReports.ExtentTestManger.startTest;
+
 public class ChangePasswordTest extends BaseTest{
     private HomePage homePage = new HomePage();
     private LoginPage loginPage = new LoginPage();
     private ChangePwdPage changePwdPage;
 
-    @Test
-    public void TC09(){
-        System.out.println("User can change password");
+    @Test(description = "User can change password")
+    public void TC09(Method method){
+
+        startTest(method.getName(), "User can change password");
+
         homePage.open();
 
         loginPage = homePage.navigateToLoginPage();

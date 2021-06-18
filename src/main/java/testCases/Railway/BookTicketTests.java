@@ -7,6 +7,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.Railway.*;
 
+import java.lang.reflect.Method;
+
+import static common.utilities.extentReports.ExtentTestManger.startTest;
+
 public class BookTicketTests extends BaseTest {
 
     private HomePage homePage = new HomePage();
@@ -15,9 +19,11 @@ public class BookTicketTests extends BaseTest {
     private BookTicketSuccessPage bookTicketSuccessPage = new BookTicketSuccessPage();
     private TimeTablePage timeTablePage;
 
-    @Test
-    public void TC14() {
-        System.out.println("User can book 1 ticket at a time");
+    @Test(description = "User can book 1 ticket at a time")
+    public void TC14(Method method) {
+        //ExtentReports Description
+        startTest(method.getName(), "User can book 1 ticket at a time");
+
         homePage.open();
         LoginPage loginPage = homePage.navigateToLoginPage();
         loginPage.login(Constant.USERNAME, Constant.PASSWORD).getWelcomeMessage();
@@ -49,9 +55,11 @@ public class BookTicketTests extends BaseTest {
         Assert.assertEquals(actual, expected, "Ticket amount is not correct");
     }
 
-    @Test
-    public void TC15() {
-        System.out.println("User can open \"Book ticket\" page by clicking on \"Book ticket\" link in \"Train timetable\" page");
+    @Test(description = "User can open \"Book ticket\" page by clicking on \"Book ticket\" link in \"Train timetable\" page")
+    public void TC15(Method method) {
+
+        startTest(method.getName(), "User can open \"Book ticket\" page by clicking on \"Book ticket\" link in \"Train timetable\" page");
+
         timeTablePage = homePage.navigateToTimeTablePage();
         bookTicketPage = timeTablePage.goToBookTicketpage(Stations.HUE, Stations.SAI_GON);
 
