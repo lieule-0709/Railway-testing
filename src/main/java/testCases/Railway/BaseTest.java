@@ -1,7 +1,9 @@
 package testCases.Railway;
 
 import common.constant.Constant;
+import common.utilities.logs.Log;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -35,10 +37,17 @@ public class BaseTest {
         }
         Constant.WEBDRIVER.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Constant.WEBDRIVER.manage().window().maximize();
+        Log.info("Tests is starting!");
     }
 
     @AfterClass
     public void afterClass() {
+        Log.info("Tests are ending!");
         Constant.WEBDRIVER.quit();
     }
+
+    public WebDriver getDriver() {
+        return Constant.WEBDRIVER;
+    }
+
 }

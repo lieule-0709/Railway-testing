@@ -3,19 +3,27 @@ package testCases.Railway;
 
 import common.constant.Constant;
 import common.utilities.Utilities;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
+
+import java.lang.reflect.Method;
+
+import static common.utilities.extentReports.ExtentTestManger.startTest;
 
 public class LoginTest extends BaseTest{
 
     private HomePage homePage = new HomePage();
     private LoginPage loginPage;
 
-    @Test
-    public void TC01() throws Exception {
-        System.out.println("User can log into Railway with valid username and password");
+    @Test(description = "User can log into Railway with valid username and password")
+    public void TC01(Method method) throws Exception {
+
+        //ExtentReports Description
+        startTest(method.getName(), "Invalid Login Scenario with invalid username and password.");
+
         homePage.open();
         Object[][] data = Utilities.readCSVData(Constant.DATA_LOGIN_PATH);
         for(int i=0; i< data.length; i++){
@@ -27,9 +35,12 @@ public class LoginTest extends BaseTest{
         }
     }
 
-    @Test
-    public void TC02() throws Exception {
-        System.out.println("User can't login with blank \"Username\" textbox");
+    @Test(description = "User can't login with blank \"Username\" textbox")
+    public void TC02(Method method) throws Exception {
+
+        //ExtentReports Description
+        startTest(method.getName(), "User can't login with blank \"Username\" textbox");
+
         loginPage = homePage.navigateToLoginPage();
         loginPage.login( "", "12345678");
         String actualMsg = loginPage.getErrMsgText();
@@ -37,9 +48,12 @@ public class LoginTest extends BaseTest{
         Assert.assertEquals(actualMsg, expectedMsg, "error message is not correctly");
     }
 
-    @Test
-    public void TC03() throws Exception {
-        System.out.println("User cannot log into Railway with invalid password");
+    @Test(description = "User cannot log into Railway with invalid password")
+    public void TC03(Method method) throws Exception {
+
+        //ExtentReports Description
+        startTest(method.getName(), "User cannot log into Railway with invalid password");
+
         loginPage = homePage.navigateToLoginPage();
         loginPage.login( "thanhle@logigear.com", "87654321");
         String actualMsg = loginPage.getErrMsgText();
@@ -47,9 +61,12 @@ public class LoginTest extends BaseTest{
         Assert.assertEquals(actualMsg, expectedMsg, "error message is not correctly");
     }
 
-    @Test
-    public void TC05() throws Exception {
-        System.out.println("System shows message when user enters wrong password several times");
+    @Test(description = "System shows message when user enters wrong password several times")
+    public void TC05(Method method) throws Exception {
+
+        //ExtentReports Description
+        startTest(method.getName(), "System shows message when user enters wrong password several times");
+
         loginPage = homePage.navigateToLoginPage();
 
         for(int i=0; i<4; i++){

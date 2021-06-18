@@ -1,0 +1,35 @@
+[INFO ] 2021-06-18 10:48:14.572 [main] Log - I am in onStart method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
+[INFO ] 2021-06-18 10:48:14.621 [main] Log - TC01 test is starting.
+[INFO ] 2021-06-18 10:48:14.624 [main] Log - TC01 test is skipped.
+[INFO ] 2021-06-18 10:48:14.825 [main] Log - TC01 test is failed.
+[INFO ] 2021-06-18 10:48:14.826 [main] Log - I am in onFinish method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
+[INFO ] 2021-06-18 10:48:51.158 [main] Log - I am in onStart method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
+[INFO ] 2021-06-18 10:48:55.828 [main] Log - Tests is starting!
+[INFO ] 2021-06-18 10:48:55.839 [main] Log - TC01 test is starting.
+[INFO ] 2021-06-18 10:49:04.506 [main] Log - TC01 test is succeed.
+[INFO ] 2021-06-18 10:49:04.695 [main] Log - TC01 test is failed.
+[INFO ] 2021-06-18 10:49:05.085 [main] Log - I am in onFinish method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
+[INFO ] 2021-06-18 10:59:31.974 [main] Log - I am in onStart method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
+[INFO ] 2021-06-18 10:59:34.234 [main] Log - Tests is starting!
+[INFO ] 2021-06-18 10:59:34.260 [main] Log - TC01 test is starting.
+[INFO ] 2021-06-18 10:59:47.213 [main] Log - TC01 test is succeed.
+[INFO ] 2021-06-18 10:59:47.378 [main] Log - TC01 test is failed.
+[INFO ] 2021-06-18 10:59:47.775 [main] Log - I am in onFinish method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
+[INFO ] 2021-06-18 11:07:51.013 [main] Log - I am in onStart method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
+[INFO ] 2021-06-18 11:07:53.198 [main] Log - Tests is starting!
+[INFO ] 2021-06-18 11:07:53.209 [main] Log - TC01 test is starting.
+[INFO ] 2021-06-18 11:08:12.407 [main] Log - TC01 test is succeed.
+[INFO ] 2021-06-18 11:08:12.439 [main] Log - Tests are ending!
+[INFO ] 2021-06-18 11:08:12.710 [main] Log - I am in onFinish method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
+[INFO ] 2021-06-18 11:19:11.492 [main] Log - I am in onStart method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
+[INFO ] 2021-06-18 11:19:13.346 [main] Log - Tests is starting!
+[INFO ] 2021-06-18 11:19:13.404 [main] Log - TC01 test is starting.
+[INFO ] 2021-06-18 11:19:21.681 [main] Log - TC01 test is succeed.
+[INFO ] 2021-06-18 11:19:21.685 [main] Log - TC02 test is starting.
+[INFO ] 2021-06-18 11:19:22.967 [main] Log - TC02 test is succeed.
+[INFO ] 2021-06-18 11:19:22.967 [main] Log - TC03 test is starting.
+[INFO ] 2021-06-18 11:19:24.232 [main] Log - TC03 test is failed.
+[INFO ] 2021-06-18 11:19:24.657 [main] Log - TC05 test is starting.
+[INFO ] 2021-06-18 11:19:28.266 [main] Log - TC05 test is failed.
+[INFO ] 2021-06-18 11:19:28.720 [main] Log - Tests are ending!
+[INFO ] 2021-06-18 11:19:29.034 [main] Log - I am in onFinish method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
