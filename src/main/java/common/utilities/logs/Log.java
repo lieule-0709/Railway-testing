@@ -22,7 +22,7 @@ public class Log {
         Log.error(message);
     }
 
-    //Fatal Level Logs
+    //Fatal Level Lozgs
     public static void fatal(String message) {
         Log.fatal(message);
     }

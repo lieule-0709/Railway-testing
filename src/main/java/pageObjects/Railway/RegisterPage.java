@@ -68,15 +68,15 @@ public class RegisterPage extends GeneralPage{
 
     //Methods
     public RegisterPage regist(String email, String pass, String confirmPass, String pid){
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", this.getbtnRegister());
+
         this.getInputEmail().sendKeys(email);
         this.getInputPass().sendKeys(pass);
         this.getInputConfirmpass().sendKeys(confirmPass);
         this.getInputPID().sendKeys(pid);
 
-        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
-        js.executeScript("arguments[0].scrollIntoView(true);", this.getbtnRegister());
         this.getbtnRegister().click();
-
         return this;
     }
 

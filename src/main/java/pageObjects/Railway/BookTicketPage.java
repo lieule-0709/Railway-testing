@@ -53,21 +53,15 @@ public class BookTicketPage extends GeneralPage {
 
     //Methods
     public void bookTicket(String departDate, String departPlace, String arrivePlace, String seatType, String amount){
-
         JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", this.getBookTicketBtn());
+
         Utilities.selectOption(this.getDepartDateCbx(), departDate);
         Utilities.selectOption(this.getDepartStationCbx(), departPlace);
-
-        js.executeScript("arguments[0].scrollIntoView(true);", this.getArriverStationCbx());
         Utilities.selectOption(this.getArriverStationCbx(), arrivePlace);
-
-        js.executeScript("arguments[0].scrollIntoView(true);", this.getSeatTypeCbx());
         Utilities.selectOption(this.getSeatTypeCbx(), seatType);
-
-        js.executeScript("arguments[0].scrollIntoView(true);", this.getSeatTypeCbx());
         Utilities.selectOption(this.getTicketAmountCbx(), amount);
 
-        js.executeScript("arguments[0].scrollIntoView(true);", this.getBookTicketBtn());
         this.getBookTicketBtn().click();
     }
 
@@ -95,5 +89,4 @@ public class BookTicketPage extends GeneralPage {
         Select select = new Select(Constant.WEBDRIVER.findElement(departStationCbx));
         return select.getFirstSelectedOption().getText();
     }
-
 }
