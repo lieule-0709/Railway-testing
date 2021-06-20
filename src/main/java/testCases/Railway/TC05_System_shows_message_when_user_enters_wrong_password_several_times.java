@@ -7,8 +7,6 @@ import pageObjects.Railway.LoginPage;
 
 import java.lang.reflect.Method;
 
-import static common.utilities.extentReports.ExtentTestManger.startTest;
-
 public class TC05_System_shows_message_when_user_enters_wrong_password_several_times extends BaseTest{
     private HomePage homePage = new HomePage();
     private LoginPage loginPage;
@@ -16,7 +14,7 @@ public class TC05_System_shows_message_when_user_enters_wrong_password_several_t
     @Test(description = "System shows message when user enters wrong password several times")
     public void TC05(Method method) throws Exception {
         //ExtentReports Description
-        startTest(method.getName(), "System shows message when user enters wrong password several times");
+//        startTest(method.getName(), "System shows message when user enters wrong password several times");
 
         homePage.open();
         loginPage = homePage.navigateToLoginPage();

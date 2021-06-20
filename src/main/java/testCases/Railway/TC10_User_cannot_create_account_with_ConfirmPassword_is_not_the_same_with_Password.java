@@ -7,7 +7,7 @@ import pageObjects.Railway.RegisterPage;
 
 import java.lang.reflect.Method;
 
-import static common.utilities.extentReports.ExtentTestManger.startTest;
+//import static common.utilities.extentReports.ExtentTestManger.startTest;
 
 public class TC10_User_cannot_create_account_with_ConfirmPassword_is_not_the_same_with_Password extends BaseTest{
     private HomePage homePage = new HomePage();
@@ -15,7 +15,7 @@ public class TC10_User_cannot_create_account_with_ConfirmPassword_is_not_the_sam
 
     @Test(description = "User can't create account with \"Confirm password\" is not the same with \"Password\"")
     public void TC10(Method method) {
-        startTest(method.getName(), "User can't create account with \"Confirm password\" is not the same with \"Password\"");
+//        startTest(method.getName(), "User can't create account with \"Confirm password\" is not the same with \"Password\"");
 
         homePage = new HomePage();
         homePage.open();

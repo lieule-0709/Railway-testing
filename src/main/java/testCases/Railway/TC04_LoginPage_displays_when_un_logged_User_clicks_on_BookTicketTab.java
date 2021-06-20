@@ -1,5 +1,6 @@
 package testCases.Railway;
 
+import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,14 +9,13 @@ import pageObjects.Railway.LoginPage;
 
 import java.lang.reflect.Method;
 
-import static common.utilities.extentReports.ExtentTestManger.startTest;
-
 public class TC04_LoginPage_displays_when_un_logged_User_clicks_on_BookTicketTab extends BaseTest {
     private HomePage homePage = new HomePage();
 
     @Test(description = "Login page displays when un-logged User clicks on \"Book ticket\" tab")
     public void TC04(Method method) {
-        startTest(method.getName(), "Login page displays when un-logged User clicks on \"Book ticket\" tab");
+//        startTest(method.getName(), "Login page displays when un-logged User clicks on \"Book ticket\" tab");
+        Constant.LOGGER = Constant.REPORT.startTest("TC04", "Login page displays when un-logged User clicks on \"Book ticket\" tab");
 
         homePage.open();
         homePage.navigateToBookTicketPage();

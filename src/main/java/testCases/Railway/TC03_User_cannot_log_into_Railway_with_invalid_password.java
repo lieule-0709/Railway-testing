@@ -1,13 +1,13 @@
 package testCases.Railway;
 
+import com.relevantcodes.extentreports.LogStatus;
+import common.constant.Constant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 
 import java.lang.reflect.Method;
-
-import static common.utilities.extentReports.ExtentTestManger.startTest;
 
 public class TC03_User_cannot_log_into_Railway_with_invalid_password extends  BaseTest {
 
@@ -17,7 +17,8 @@ public class TC03_User_cannot_log_into_Railway_with_invalid_password extends  Ba
     @Test(description = "User cannot log into Railway with invalid password")
     public void TC03(Method method) throws Exception {
         //ExtentReports Description
-        startTest(method.getName(), "User cannot log into Railway with invalid password");
+//        startTest(method.getName(), "User cannot log into Railway with invalid password");
+        Constant.LOGGER = Constant.REPORT.startTest("TC03", "User cannot log into Railway with invalid password");
 
         homePage.open();
         loginPage = homePage.navigateToLoginPage();

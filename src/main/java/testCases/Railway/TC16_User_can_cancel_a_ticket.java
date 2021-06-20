@@ -10,7 +10,7 @@ import pageObjects.Railway.MyTicketPage;
 
 import java.lang.reflect.Method;
 
-import static common.utilities.extentReports.ExtentTestManger.startTest;
+//import static common.utilities.extentReports.ExtentTestManger.startTest;
 
 public class TC16_User_can_cancel_a_ticket extends BaseTest{
     private HomePage homePage = new HomePage();
@@ -19,7 +19,7 @@ public class TC16_User_can_cancel_a_ticket extends BaseTest{
 
     @Test(description = "User can cancel a ticket")
     public void TC16(Method method) {
-        startTest(method.getName(), "User can cancel a ticket");
+//        startTest(method.getName(), "User can cancel a ticket");
 
         homePage.open();
         loginPage = homePage.navigateToLoginPage();

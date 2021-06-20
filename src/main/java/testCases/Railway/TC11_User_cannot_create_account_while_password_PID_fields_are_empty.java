@@ -7,7 +7,7 @@ import pageObjects.Railway.RegisterPage;
 
 import java.lang.reflect.Method;
 
-import static common.utilities.extentReports.ExtentTestManger.startTest;
+//import static common.utilities.extentReports.ExtentTestManger.startTest;
 
 public class TC11_User_cannot_create_account_while_password_PID_fields_are_empty extends BaseTest{
     private HomePage homePage = new HomePage();
@@ -15,7 +15,7 @@ public class TC11_User_cannot_create_account_while_password_PID_fields_are_empty
 
     @Test(description = "User can't create account while password and PID fields are empty")
     public void TC11(Method method) {
-        startTest(method.getName(), "User can't create account while password and PID fields are empty");
+//        startTest(method.getName(), "User can't create account while password and PID fields are empty");
 
         homePage = new HomePage();
         homePage.open();

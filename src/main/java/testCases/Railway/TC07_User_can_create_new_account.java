@@ -7,7 +7,7 @@ import pageObjects.Railway.RegisterPage;
 
 import java.lang.reflect.Method;
 
-import static common.utilities.extentReports.ExtentTestManger.startTest;
+//import static common.utilities.extentReports.ExtentTestManger.startTest;
 
 public class TC07_User_can_create_new_account extends BaseTest{
     private HomePage homePage = new HomePage();
@@ -15,7 +15,7 @@ public class TC07_User_can_create_new_account extends BaseTest{
 
     @Test(description = "User can create new account")
     public void TC07(Method method) {
-        startTest(method.getName(), "User can create new account");
+//        startTest(method.getName(), "User can create new account");
 
         System.out.println("");
         homePage = new HomePage();

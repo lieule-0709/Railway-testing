@@ -8,7 +8,7 @@ import pageObjects.Railway.LoginPage;
 
 import java.lang.reflect.Method;
 
-import static common.utilities.extentReports.ExtentTestManger.startTest;
+//import static common.utilities.extentReports.ExtentTestManger.startTest;
 
 public class TC09_User_can_change_password extends BaseTest{
     private HomePage homePage = new HomePage();
@@ -18,7 +18,7 @@ public class TC09_User_can_change_password extends BaseTest{
     @Test(description = "User can change password")
     public void TC09(Method method){
 
-        startTest(method.getName(), "User can change password");
+//        startTest(method.getName(), "User can change password");
 
         homePage.open();
 

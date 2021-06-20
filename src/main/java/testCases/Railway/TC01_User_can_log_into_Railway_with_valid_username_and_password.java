@@ -11,7 +11,6 @@ import pageObjects.Railway.LoginPage;
 
 import java.lang.reflect.Method;
 
-import static common.utilities.extentReports.ExtentTestManger.startTest;
 
 public class TC01_User_can_log_into_Railway_with_valid_username_and_password extends BaseTest {
 
@@ -21,7 +20,7 @@ public class TC01_User_can_log_into_Railway_with_valid_username_and_password ext
     @Test(description = "User can log into Railway with valid username and password")
     public void TC01(Method method) throws Exception {
         //ExtentReports Description
-        startTest(method.getName(), "Invalid Login Scenario with invalid username and password.");
+//        startTest(method.getName(), "Invalid Login Scenario with invalid username and password.");
         homePage.open();
         Object[][] data = Utilities.readCSVData(Constant.DATA_LOGIN_PATH);
         for (int i = 0; i < data.length; i++) {

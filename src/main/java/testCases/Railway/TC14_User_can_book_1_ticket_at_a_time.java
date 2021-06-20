@@ -10,7 +10,7 @@ import pageObjects.Railway.BookTicketSuccessPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 import java.lang.reflect.Method;
-import static common.utilities.extentReports.ExtentTestManger.startTest;
+//import static common.utilities.extentReports.ExtentTestManger.startTest;
 
 
 public class TC14_User_can_book_1_ticket_at_a_time extends BaseTest {
@@ -21,7 +21,7 @@ public class TC14_User_can_book_1_ticket_at_a_time extends BaseTest {
     @Test(description = "User can book 1 ticket at a time")
     public void TC14(Method method) {
         //ExtentReports Description
-        startTest(method.getName(), "User can book 1 ticket at a time");
+//        startTest(method.getName(), "User can book 1 ticket at a time");
 
         homePage.open();
         LoginPage loginPage = homePage.navigateToLoginPage();

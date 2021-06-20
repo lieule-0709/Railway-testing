@@ -9,16 +9,12 @@ import pageObjects.Railway.LoginPage;
 
 import java.lang.reflect.Method;
 
-import static common.utilities.extentReports.ExtentTestManger.startTest;
-
 public class TC06_Additional_pages_display_once_user_logged_in extends BaseTest{
     private HomePage homePage = new HomePage();
     private LoginPage loginPage;
 
     @Test(description = "Additional pages display once user logged in")
     public void TC06(Method method) {
-        startTest(method.getName(), "Additional pages display once user logged in");
-
         homePage.open();
         loginPage = homePage.navigateToLoginPage();
         loginPage.login("thanhle@logigear.com", "12345678");

@@ -9,7 +9,7 @@ import pageObjects.Railway.TimeTablePage;
 
 import java.lang.reflect.Method;
 
-import static common.utilities.extentReports.ExtentTestManger.startTest;
+//import static common.utilities.extentReports.ExtentTestManger.startTest;
 
 public class TC15_User_can_open_BookTicketPage_by_clicking_on_BookTicketLink_in_TrainTimetablePage extends BaseTest{
     private HomePage homePage = new HomePage();
@@ -18,7 +18,7 @@ public class TC15_User_can_open_BookTicketPage_by_clicking_on_BookTicketLink_in_
 
     @Test(description = "User can open \"Book ticket\" page by clicking on \"Book ticket\" link in \"Train timetable\" page")
     public void TC15(Method method) {
-        startTest(method.getName(), "User can open \"Book ticket\" page by clicking on \"Book ticket\" link in \"Train timetable\" page");
+//        startTest(method.getName(), "User can open \"Book ticket\" page by clicking on \"Book ticket\" link in \"Train timetable\" page");
 
         homePage.open();
         timeTablePage = homePage.navigateToTimeTablePage();
