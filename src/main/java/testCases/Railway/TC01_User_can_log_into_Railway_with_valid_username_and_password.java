@@ -1,16 +1,14 @@
 package testCases.Railway;
 
-
+import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
 import common.utilities.Utilities;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 
 import java.lang.reflect.Method;
-
 
 public class TC01_User_can_log_into_Railway_with_valid_username_and_password extends BaseTest {
 
@@ -19,16 +17,19 @@ public class TC01_User_can_log_into_Railway_with_valid_username_and_password ext
 
     @Test(description = "User can log into Railway with valid username and password")
     public void TC01(Method method) throws Exception {
-        //ExtentReports Description
-//        startTest(method.getName(), "Invalid Login Scenario with invalid username and password.");
+        logger = Constant.REPORT.startTest("TC01", "User can log into Railway with valid username and password");
+
+        logger.log(LogStatus.INFO, "Step 1", "Navigate to QA Railway Website");
         homePage.open();
-        Object[][] data = Utilities.readCSVData(Constant.DATA_LOGIN_PATH);
-        for (int i = 0; i < data.length; i++) {
-            loginPage = homePage.navigateToLoginPage();
-            String actualMsg = loginPage.login(data[i][0] + "", data[i][1] + "").getWelcomeMessage();
-            String expectedMsg = "Welcome " + data[i][0];
-            Assert.assertEquals(actualMsg, expectedMsg, "welcome msg is not correctly");
-            homePage.navigateToLogoutPage();
-        }
+
+        logger.log(LogStatus.INFO, "Step 2", "Click on \"Login\" tab");
+        loginPage = homePage.navigateToLoginPage();
+
+        logger.log(LogStatus.INFO, "step 3", "Enter valid Email and Password");
+        logger.log(LogStatus.INFO, "Step 4", "Click on \"Login\" button");
+        String actualMsg = loginPage.login(System.getenv("USERNAME"), System.getenv("PASSWORD")).getWelcomeMessage();
+        String expectedMsg = "Welcome " + System.getenv("USERNAME");
+
+        Assert.assertEquals(actualMsg, expectedMsg, "welcome msg is not correctly");
     }
 }

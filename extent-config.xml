@@ -39,6 +39,14 @@
       ]]>
         </scripts>
 
+        <scripts>
+            <![CDATA[
+                $('.brand-logo').text('VINIT');
+
+            ]]>
+
+        </scripts>
+
         <!-- custom styles -->
         <styles>
             <![CDATA[

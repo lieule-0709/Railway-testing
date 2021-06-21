@@ -5,7 +5,12 @@ import common.utilities.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Quotes;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class BookTicketPage extends GeneralPage {
     //Locators
@@ -58,7 +63,11 @@ public class BookTicketPage extends GeneralPage {
 
         Utilities.selectOption(this.getDepartDateCbx(), departDate);
         Utilities.selectOption(this.getDepartStationCbx(), departPlace);
+
+        WebDriverWait wait = new WebDriverWait(Constant.WEBDRIVER,10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//select[@name='ArriveStation']/option[normalize-space(.) = '" + arrivePlace + "']")));
         Utilities.selectOption(this.getArriverStationCbx(), arrivePlace);
+
         Utilities.selectOption(this.getSeatTypeCbx(), seatType);
         Utilities.selectOption(this.getTicketAmountCbx(), amount);
 
