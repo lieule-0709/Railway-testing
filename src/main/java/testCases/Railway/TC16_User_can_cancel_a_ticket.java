@@ -5,7 +5,12 @@ import common.constant.Constant;
 import dataObjects.SeatTypes;
 import dataObjects.Stations;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,6 +20,8 @@ import pageObjects.Railway.LoginPage;
 import pageObjects.Railway.MyTicketPage;
 
 import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 public class TC16_User_can_cancel_a_ticket extends BaseTest{
     private HomePage homePage = new HomePage();
@@ -23,7 +30,7 @@ public class TC16_User_can_cancel_a_ticket extends BaseTest{
     private MyTicketPage myTicketPage;
 
     @Test(description = "User can cancel a ticket")
-    public void TC16(Method method) {
+    public void TC16(Method method) throws InterruptedException {
         logger = Constant.REPORT.startTest("TC16", "User can cancel a ticket");
 
         logger.log(LogStatus.INFO, "Step 1", "Navigate to QA Railway Website");
@@ -46,7 +53,7 @@ public class TC16_User_can_cancel_a_ticket extends BaseTest{
         logger.log(LogStatus.INFO, "Step 5", "Click on \"Cancel\" button of ticket which user has just booked.");
         logger.log(LogStatus.INFO, "Step 6", "Click on \"OK\" button on Confirmation message \"Are you sure?\"");
         myTicketPage.cancelTicket(Stations.DA_NANG, Stations.SAI_GON, SeatTypes.HS, "", "", "New", "1");
-
+        Thread.sleep(Constant.SHORT_SLEEP);
         int countRowsAfter = myTicketPage.countRowsFitInfo(Stations.DA_NANG, Stations.SAI_GON, "", "", "", "New", "1");
         Assert.assertEquals(countRowsAfter, countRowsBefore-1, "Cancel ticket failed");
     }
