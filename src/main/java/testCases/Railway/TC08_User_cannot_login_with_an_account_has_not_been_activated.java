@@ -12,12 +12,12 @@ import pageObjects.Railway.LoginPage;
 import javax.management.monitor.GaugeMonitor;
 import java.lang.reflect.Method;
 
-public class TC08_User_cannot_login_with_an_account_has_not_been_activated extends BaseTest{
+public class TC08_User_cannot_login_with_an_account_has_not_been_activated extends BaseTest {
     private HomePage homePage = new HomePage();
     private LoginPage loginPage;
 
     @Test(description = "User can't login with an account hasn't been activated")
-    public void TC08(Method method){
+    public void TC08() {
         logger = Constant.REPORT.startTest("TC08", "User can't login with an account hasn't been activated");
 
         logger.log(LogStatus.INFO, "Step 1", "Navigate to QA Railway Website");

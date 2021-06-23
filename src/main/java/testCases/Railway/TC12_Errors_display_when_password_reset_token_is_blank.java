@@ -11,13 +11,13 @@ import pageObjects.Railway.LoginPage;
 
 import java.lang.reflect.Method;
 
-public class TC12_Errors_display_when_password_reset_token_is_blank extends BaseTest{
+public class TC12_Errors_display_when_password_reset_token_is_blank extends BaseTest {
     private HomePage homePage = new HomePage();
     private LoginPage loginPage;
     private ForgotPasswordPage forgotPasswordPage;
 
     @Test(description = "Errors display when password reset token is blank")
-    public void TC12(Method method){
+    public void TC12() {
         logger = Constant.REPORT.startTest("TC12", "Errors display when password reset token is blank");
 
         logger.log(LogStatus.INFO, "Step 1", "Navigate to QA Railway Login page");

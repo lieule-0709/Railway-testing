@@ -5,63 +5,28 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVRecord;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import java.io.File;
-import java.io.FileReader;
-import java.io.Reader;
+
+import java.io.*;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     protected ExtentTest logger;
-    protected String pathFile = System.getProperty("user.dir") + "/src/main/java/testCases/Railway/data.csv";
-
-    @DataProvider(name = "data")
-    public Object[][] readCSVData() throws Exception {
-        String[][] testData;
-
-        Reader fileInputStream = new FileReader(pathFile);
-        Iterable<CSVRecord> records = CSVFormat.EXCEL.parse(fileInputStream);
-
-        int numberOfRecords = 0;
-        int numberOfColumns = 0;
-
-        for (CSVRecord record : records
-        ) {
-            System.out.println("Reading record line #" + ++numberOfRecords);
-            numberOfColumns = record.size();
-        }
-
-        testData = new String[numberOfRecords - 1][numberOfColumns];
-
-        int currentRecord = 0;
-
-        fileInputStream = new FileReader(pathFile);
-        records = CSVFormat.EXCEL.parse(fileInputStream);
-
-        for (CSVRecord record : records) {
-            System.out.println("Reading test data ");
-            if (record.getRecordNumber() == 1) {
-                System.out.println("record = " + record);
-                continue;
-            }
-
-            for (int i = 0; i < record.size(); i++) {
-                testData[currentRecord][i] = record.get(i);
-
-            }
-            currentRecord++;
-        }
-        return testData;
-    }
+    protected String pathFile = System.getProperty("user.dir") + "/src/main/java/testCases/Railway/data.json";
 
     @Parameters("browserName")
     @BeforeSuite
@@ -82,9 +47,47 @@ public class BaseTest {
         Constant.REPORT.loadConfig(new File(System.getProperty("user.dir") + "\\extent-config.xml"));
     }
 
+    @DataProvider( name = "data" )
+    public Object[][] getData(Method method)
+    {
+        JSONParser parser = new org.json.simple.parser.JSONParser();
+        Map<String, JSONObject> dataMap = new HashMap<String, JSONObject>();
+        Iterator entriesIterator = null;
+
+        try{
+            JSONObject contentObj = (JSONObject)parser.parse(new FileReader(new File(pathFile)));
+            JSONObject dataObj = (JSONObject)contentObj.get(method.getName());
+
+            dataObj.keySet().forEach(key -> {
+                dataMap.put(String.valueOf(key), (JSONObject) dataObj.get(key));
+            });
+
+            Set entries = dataObj.entrySet();
+            entriesIterator = entries.iterator();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (ParseException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        Object[][] arr = new Object[dataMap.size()][1];
+        int i = 0;
+        while(entriesIterator.hasNext()){
+            Map.Entry mapping = (Map.Entry) entriesIterator.next();
+            arr[i][0] = mapping.getValue();
+            i++;
+        }
+        return arr;
+    }
+
     @Parameters("browserName")
-    @BeforeTest
-    public void beforeTest(String browserName) {
+    @BeforeClass
+    public void beforeClass(String browserName) {
         switch (browserName) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
@@ -123,8 +126,8 @@ public class BaseTest {
         Constant.REPORT.endTest(logger);
     }
 
-    @AfterTest
-    public void afterTest() {
+    @AfterClass
+    public void afterClass() {
         Constant.WEBDRIVER.quit();
     }
 

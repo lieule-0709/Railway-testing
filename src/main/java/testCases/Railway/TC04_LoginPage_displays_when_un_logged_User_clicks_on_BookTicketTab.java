@@ -13,7 +13,7 @@ public class TC04_LoginPage_displays_when_un_logged_User_clicks_on_BookTicketTab
     private HomePage homePage = new HomePage();
 
     @Test(description = "Login page displays when un-logged User clicks on \"Book ticket\" tab")
-    public void TC04(Method method) {
+    public void TC04() {
         logger = Constant.REPORT.startTest("TC04", "Login page displays when un-logged User clicks on \"Book ticket\" tab");
 
         logger.log(LogStatus.INFO, "Step 1", "Navigate to QA Railway Website");

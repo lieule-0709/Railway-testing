@@ -2,6 +2,7 @@ package pageObjects.Railway;
 
 import common.constant.Constant;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class ForgotPasswordPage extends GeneralPage{
@@ -26,6 +27,9 @@ public class ForgotPasswordPage extends GeneralPage{
     //Methods
     public void sendResetPwdForm(String email){
         this.getEmailInput().sendKeys(email);
+
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", this.getSendBtn());
         this.getSendBtn().click();
     }
 }

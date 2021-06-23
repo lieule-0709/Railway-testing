@@ -11,13 +11,13 @@ import pageObjects.Railway.LoginPage;
 
 import java.lang.reflect.Method;
 
-public class TC13_Errors_display_if_Password_and_ConfirmPassword_donot_match_when_resetting_password extends BaseTest{
+public class TC13_Errors_display_if_Password_and_ConfirmPassword_donot_match_when_resetting_password extends BaseTest {
     private HomePage homePage = new HomePage();
     private LoginPage loginPage;
     private ForgotPasswordPage forgotPasswordPage;
 
     @Test(description = "Errors display if password and confirm password don't match when resetting password")
-    public void TC13(Method method){
+    public void TC13() {
         logger = Constant.REPORT.startTest("TC13", "Errors display if password and confirm password don't match when resetting password");
 
         logger.log(LogStatus.INFO, "Step 1", "Navigate to QA Railway Login page");

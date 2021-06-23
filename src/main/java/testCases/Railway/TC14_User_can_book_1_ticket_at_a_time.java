@@ -4,12 +4,14 @@ import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
 import dataObjects.SeatTypes;
 import dataObjects.Stations;
+import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.Railway.BookTicketPage;
 import pageObjects.Railway.BookTicketSuccessPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
+
 import java.lang.reflect.Method;
 
 public class TC14_User_can_book_1_ticket_at_a_time extends BaseTest {
@@ -18,8 +20,9 @@ public class TC14_User_can_book_1_ticket_at_a_time extends BaseTest {
     private BookTicketPage bookTicketPage;
     private BookTicketSuccessPage bookTicketSuccessPage = new BookTicketSuccessPage();
 
-    @Test(description = "User can book 1 ticket at a time")
-    public void TC14(Method method) {
+    @Test(dataProvider = "data", description = "User can book 1 ticket at a time")
+    public void TC14(Object data) {
+        JSONObject jsonData = (JSONObject) data;
         logger = Constant.REPORT.startTest("TC14", "User can book 1 ticket at a time");
 
         logger.log(LogStatus.INFO, "Step 1", "Navigate to QA Railway Website");
@@ -32,35 +35,31 @@ public class TC14_User_can_book_1_ticket_at_a_time extends BaseTest {
         logger.log(LogStatus.INFO, "Step 3", "Click on \"Book ticket\" tab");
         bookTicketPage = homePage.navigateToBookTicketPage();
 
-        logger.log(LogStatus.INFO, "Step 4", "Select a \"Depart date\" from the list");
-        logger.log(LogStatus.INFO, "Step 5", "Select \"Sài Gòn\" for \"Depart from\" and \"Nha Trang\" for \"Arrive at\".");;
-        logger.log(LogStatus.INFO, "Step 6", "Select \"Soft bed with air conditioner\" for \"Seat type\"");
-        logger.log(LogStatus.INFO, "Step 7", "Select \"1\" for \"Ticket amount\"");
+        logger.log(LogStatus.INFO, "Step 4", "Select " + jsonData.get("date") + " from the list depart date");
+        logger.log(LogStatus.INFO, "Step 5", "Select " + jsonData.get("depart station") + " for \"Depart from\" and " + jsonData.get("arriver station") + " for \"Arrive at\".");
+        ;
+        logger.log(LogStatus.INFO, "Step 6", "Select " + jsonData.get("seat type") + " for \"Seat type\"");
+        logger.log(LogStatus.INFO, "Step 7", "Select " + jsonData.get("amount") + " for \"Ticket amount\"");
         logger.log(LogStatus.INFO, "Step 8", "Click on \"Book ticket\" button");
-        bookTicketPage.bookTicket("6/29/2021", Stations.SAI_GON, Stations.NHA_TRANG, SeatTypes.SBC, "1");
+        bookTicketPage.bookTicket((String) jsonData.get("date"), (String) jsonData.get("depart station"), (String) jsonData.get("arriver station"), (String) jsonData.get("seat type"), (String) jsonData.get("amount"));
 
         String actual = bookTicketSuccessPage.getSuccessMsgText();
         String expected = "Ticket Booked Successfully!";
         Assert.assertEquals(actual, expected, "Success message is displayed not correct");
 
         actual = bookTicketSuccessPage.getDepartDate();
-        expected = "6/29/2021";
-        Assert.assertEquals(actual, expected, "Depart date is not correct");
+        Assert.assertEquals(actual, jsonData.get("date"), "Depart date is not correct");
 
         actual = bookTicketSuccessPage.getDepartStation();
-        expected = Stations.SAI_GON;
-        Assert.assertEquals(actual, expected, "Depart station is not correct");
+        Assert.assertEquals(actual, jsonData.get("depart station"), "Depart station is not correct");
 
         actual = bookTicketSuccessPage.getArriveStation();
-        expected = Stations.NHA_TRANG;
-        Assert.assertEquals(actual, expected, "Arrive station is not correct");
+        Assert.assertEquals(actual, jsonData.get("arriver station"), "Arrive station is not correct");
 
         actual = bookTicketSuccessPage.getSeatType();
-        expected = SeatTypes.SBC;
-        Assert.assertEquals(actual, expected, "Seat type is not correct");
+        Assert.assertEquals(actual, jsonData.get("seat type"), "Seat type is not correct");
 
         actual = bookTicketSuccessPage.getAmount();
-        expected = "1";
-        Assert.assertEquals(actual, expected, "Ticket amount is not correct");
+        Assert.assertEquals(actual, jsonData.get("amount"), "Ticket amount is not correct");
     }
 }

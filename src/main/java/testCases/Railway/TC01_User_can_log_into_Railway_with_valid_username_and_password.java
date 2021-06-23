@@ -16,7 +16,7 @@ public class TC01_User_can_log_into_Railway_with_valid_username_and_password ext
     private LoginPage loginPage;
 
     @Test(description = "User can log into Railway with valid username and password")
-    public void TC01(Method method) throws Exception {
+    public void TC01() throws Exception {
         logger = Constant.REPORT.startTest("TC01", "User can log into Railway with valid username and password");
 
         logger.log(LogStatus.INFO, "Step 1", "Navigate to QA Railway Website");

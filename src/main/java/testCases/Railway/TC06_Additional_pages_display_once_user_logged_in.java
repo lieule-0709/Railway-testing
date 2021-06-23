@@ -10,12 +10,12 @@ import pageObjects.Railway.LoginPage;
 
 import java.lang.reflect.Method;
 
-public class TC06_Additional_pages_display_once_user_logged_in extends BaseTest{
+public class TC06_Additional_pages_display_once_user_logged_in extends BaseTest {
     private HomePage homePage = new HomePage();
     private LoginPage loginPage;
 
     @Test(description = "System shows message when user enters wrong password several times")
-    public void TC06(Method method) {
+    public void TC06() {
         logger = Constant.REPORT.startTest("TC06", "System shows message when user enters wrong password several times");
 
         logger.log(LogStatus.INFO, "Step 1", "Navigate to QA Railway Website");
