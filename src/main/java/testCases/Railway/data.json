@@ -1,0 +1,68 @@
+{
+  "TC02": {
+    "data login": {
+      "userName": "",
+      "password": "12345678"
+    }
+  },
+  "TC03": {
+    "data login": {
+      "userName": "thanhle@logigear.com",
+      "password": "87654321"
+    }
+  },
+  "TC05": {
+    "data login": {
+      "userName": "thanhle@logigear.com",
+      "password": "87654321"
+    }
+  },
+  "TC07": {
+    "Registration data": {
+      "email": "lieu@gmail.com",
+      "password": "12345678",
+      "confirm password": "12345678",
+      "pid": "12345678"
+    }
+  },
+  "TC10": {
+    "Registration data": {
+      "email": "lieu@gmail.com",
+      "password": "12345678",
+      "confirm password": "87654321",
+      "pid": "12345678"
+    }
+  },
+  "TC11": {
+    "Registration data": {
+      "email": "lieu@gmail.com",
+      "password": "",
+      "confirm password": "",
+      "pid": ""
+    }
+  },
+  "TC14": {
+    "ticket data": {
+      "date": "6/29/2021",
+      "depart station": "Sài Gòn",
+      "arriver station": "Nha Trang",
+      "seat type": "Soft bed with air conditioner",
+      "amount": "1"
+    }
+  },
+  "TC15": {
+    "ticket data": {
+      "depart station": "Huế",
+      "arriver station": "Sài Gòn"
+    }
+  },
+  "TC16": {
+    "ticket data": {
+      "date": "6/29/2021",
+      "depart station": "Đà Nẵng",
+      "arriver station": "Sài Gòn",
+      "seat type": "Soft bed",
+      "amount": "1"
+    }
+  }
+}

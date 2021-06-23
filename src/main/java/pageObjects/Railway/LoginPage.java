@@ -53,13 +53,14 @@ public class LoginPage extends GeneralPage {
 
     //Methods
     public HomePage login(String username, String password) {
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", this.getBtnLogin());
+
         this.getTxtUsername().clear();
         this.getTxtUsername().sendKeys(username);
         this.getTxtPassword().clear();
         this.getTxtPassword().sendKeys(password);
 
-        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
-        js.executeScript("arguments[0].scrollIntoView(true);", this.getBtnLogin());
         this.getBtnLogin().click();
         return new HomePage();
     }

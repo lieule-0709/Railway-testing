@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="browserName" value="firefox"></parameter>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/anhng/IdeaProjects/Railway-testing/src/main/java/testCases/Railway">
+        <classes>
+            <class name="testCases.Railway.TC01_User_can_log_into_Railway_with_valid_username_and_password">
+                <methods>
+                    <include name="TC01"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC02_User_can_not_login_with_blank_UsernameTextbox">
+                <methods>
+                    <include name="TC02"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC03_User_cannot_log_into_Railway_with_invalid_password">
+                <methods>
+                    <include name="TC03"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC04_LoginPage_displays_when_un_logged_User_clicks_on_BookTicketTab">
+                <methods>
+                    <include name="TC04"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC05_System_shows_message_when_user_enters_wrong_password_several_times">
+                <methods>
+                    <include name="TC05"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC06_Additional_pages_display_once_user_logged_in">
+                <methods>
+                    <include name="TC06"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC07_User_can_create_new_account">
+                <methods>
+                    <include name="TC07"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC08_User_cannot_login_with_an_account_has_not_been_activated">
+                <methods>
+                    <include name="TC08"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC09_User_can_change_password">
+                <methods>
+                    <include name="TC09"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC10_User_cannot_create_account_with_ConfirmPassword_is_not_the_same_with_Password">
+                <methods>
+                    <include name="TC10"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC11_User_cannot_create_account_while_password_PID_fields_are_empty">
+                <methods>
+                    <include name="TC11"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC12_Errors_display_when_password_reset_token_is_blank">
+                <methods>
+                    <include name="TC12"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC13_Errors_display_if_Password_and_ConfirmPassword_donot_match_when_resetting_password">
+                <methods>
+                    <include name="TC13"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC14_User_can_book_1_ticket_at_a_time">
+                <methods>
+                    <include name="TC14"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC15_User_can_open_BookTicketPage_by_clicking_on_BookTicketLink_in_TrainTimetablePage">
+                <methods>
+                    <include name="TC15"/>
+                </methods>
+            </class>
+            <class name="testCases.Railway.TC16_User_can_cancel_a_ticket">
+                <methods>
+                    <include name="TC16"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+</suite>

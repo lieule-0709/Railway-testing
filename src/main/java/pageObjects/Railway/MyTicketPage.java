@@ -1,10 +1,15 @@
 package pageObjects.Railway;
 
+import com.google.common.base.Function;
 import common.constant.Constant;
 import common.utilities.Utilities;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class MyTicketPage extends GeneralPage {
 
@@ -55,6 +60,10 @@ public class MyTicketPage extends GeneralPage {
         JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
         js.executeScript("arguments[0].scrollIntoView(true);", btn);
         btn.click();
+
+
+        WebDriverWait wait = new WebDriverWait(Constant.WEBDRIVER, 5);
+        wait.until(ExpectedConditions.alertIsPresent());
 
         Constant.WEBDRIVER.switchTo().alert().accept();
     }

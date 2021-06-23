@@ -1,90 +1,99 @@
-[INFO ] 2021-06-18 10:48:14.572 [main] Log - I am in onStart method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
-[INFO ] 2021-06-18 10:48:14.621 [main] Log - TC01 test is starting.
-[INFO ] 2021-06-18 10:48:14.624 [main] Log - TC01 test is skipped.
-[INFO ] 2021-06-18 10:48:14.825 [main] Log - TC01 test is failed.
-[INFO ] 2021-06-18 10:48:14.826 [main] Log - I am in onFinish method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
-[INFO ] 2021-06-18 10:48:51.158 [main] Log - I am in onStart method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
-[INFO ] 2021-06-18 10:48:55.828 [main] Log - Tests is starting!
-[INFO ] 2021-06-18 10:48:55.839 [main] Log - TC01 test is starting.
-[INFO ] 2021-06-18 10:49:04.506 [main] Log - TC01 test is succeed.
-[INFO ] 2021-06-18 10:49:04.695 [main] Log - TC01 test is failed.
-[INFO ] 2021-06-18 10:49:05.085 [main] Log - I am in onFinish method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
-[INFO ] 2021-06-18 10:59:31.974 [main] Log - I am in onStart method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
-[INFO ] 2021-06-18 10:59:34.234 [main] Log - Tests is starting!
-[INFO ] 2021-06-18 10:59:34.260 [main] Log - TC01 test is starting.
-[INFO ] 2021-06-18 10:59:47.213 [main] Log - TC01 test is succeed.
-[INFO ] 2021-06-18 10:59:47.378 [main] Log - TC01 test is failed.
-[INFO ] 2021-06-18 10:59:47.775 [main] Log - I am in onFinish method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
-[INFO ] 2021-06-18 11:07:51.013 [main] Log - I am in onStart method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
-[INFO ] 2021-06-18 11:07:53.198 [main] Log - Tests is starting!
-[INFO ] 2021-06-18 11:07:53.209 [main] Log - TC01 test is starting.
-[INFO ] 2021-06-18 11:08:12.407 [main] Log - TC01 test is succeed.
-[INFO ] 2021-06-18 11:08:12.439 [main] Log - Tests are ending!
-[INFO ] 2021-06-18 11:08:12.710 [main] Log - I am in onFinish method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
-[INFO ] 2021-06-18 11:19:11.492 [main] Log - I am in onStart method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
-[INFO ] 2021-06-18 11:19:13.346 [main] Log - Tests is starting!
-[INFO ] 2021-06-18 11:19:13.404 [main] Log - TC01 test is starting.
-[INFO ] 2021-06-18 11:19:21.681 [main] Log - TC01 test is succeed.
-[INFO ] 2021-06-18 11:19:21.685 [main] Log - TC02 test is starting.
-[INFO ] 2021-06-18 11:19:22.967 [main] Log - TC02 test is succeed.
-[INFO ] 2021-06-18 11:19:22.967 [main] Log - TC03 test is starting.
-[INFO ] 2021-06-18 11:19:24.232 [main] Log - TC03 test is failed.
-[INFO ] 2021-06-18 11:19:24.657 [main] Log - TC05 test is starting.
-[INFO ] 2021-06-18 11:19:28.266 [main] Log - TC05 test is failed.
-[INFO ] 2021-06-18 11:19:28.720 [main] Log - Tests are ending!
-[INFO ] 2021-06-18 11:19:29.034 [main] Log - I am in onFinish method C:/Users/SATTDN21.02.01/IdeaProjects/Railway testing/src/main/java/testCases/Railway/LoginTest.java
-[INFO ] 2021-06-18 13:45:16.991 [TestNG-tests-2] Log - I am in onStart method Test on FireFox
-[INFO ] 2021-06-18 13:45:16.991 [TestNG-tests-3] Log - I am in onStart method Test on Edge
-[INFO ] 2021-06-18 13:45:16.991 [TestNG-tests-1] Log - I am in onStart method Test on Chrome
-[INFO ] 2021-06-18 13:45:22.799 [TestNG-tests-1] Log - Tests is starting!
-[INFO ] 2021-06-18 13:45:22.816 [TestNG-tests-1] Log - TC14 test is starting.
-[INFO ] 2021-06-18 13:45:31.490 [TestNG-tests-1] Log - TC14 test is failed.
-[INFO ] 2021-06-18 13:45:31.950 [TestNG-tests-1] Log - TC15 test is starting.
-[INFO ] 2021-06-18 13:45:33.656 [TestNG-tests-1] Log - TC15 test is succeed.
-[INFO ] 2021-06-18 13:45:33.658 [TestNG-tests-1] Log - Tests are ending!
-[INFO ] 2021-06-18 13:45:35.634 [TestNG-tests-1] Log - Tests is starting!
-[INFO ] 2021-06-18 13:45:35.635 [TestNG-tests-1] Log - TC09 test is starting.
-[INFO ] 2021-06-18 13:45:48.303 [TestNG-tests-3] Log - Tests is starting!
-[INFO ] 2021-06-18 13:45:48.303 [TestNG-tests-3] Log - TC14 test is starting.
-[INFO ] 2021-06-18 13:46:07.198 [TestNG-tests-2] Log - Tests is starting!
-[INFO ] 2021-06-18 13:46:07.198 [TestNG-tests-2] Log - TC14 test is starting.
-[INFO ] 2021-06-18 13:46:18.393 [TestNG-tests-1] Log - TC09 test is failed.
-[INFO ] 2021-06-18 13:46:20.013 [TestNG-tests-2] Log - TC14 test is failed.
-[INFO ] 2021-06-18 13:46:20.081 [TestNG-tests-1] Log - Tests are ending!
-[INFO ] 2021-06-18 13:46:20.316 [TestNG-tests-2] Log - TC15 test is starting.
-[INFO ] 2021-06-18 13:46:25.872 [TestNG-tests-2] Log - TC15 test is failed.
-[INFO ] 2021-06-18 13:46:25.872 [TestNG-tests-3] Log - TC14 test is failed.
-[INFO ] 2021-06-18 13:46:25.877 [TestNG-tests-3] Log - TC14 test is failed.
-[INFO ] 2021-06-18 13:46:25.878 [TestNG-tests-2] Log - TC15 test is failed.
-[INFO ] 2021-06-18 13:46:25.880 [TestNG-tests-3] Log - I am in onFinish method Test on Edge
-[INFO ] 2021-06-18 13:46:25.881 [TestNG-tests-2] Log - Tests are ending!
-[INFO ] 2021-06-18 13:46:25.925 [TestNG-tests-2] Log - I am in onFinish method Test on FireFox
-[INFO ] 2021-06-18 13:46:27.821 [TestNG-tests-1] Log - Tests is starting!
-[INFO ] 2021-06-18 13:46:27.822 [TestNG-tests-1] Log - TC04 test is starting.
-[INFO ] 2021-06-18 13:46:33.280 [TestNG-tests-1] Log - TC04 test is succeed.
-[INFO ] 2021-06-18 13:46:33.280 [TestNG-tests-1] Log - TC06 test is starting.
-[INFO ] 2021-06-18 13:46:36.320 [TestNG-tests-1] Log - TC06 test is succeed.
-[INFO ] 2021-06-18 13:46:36.320 [TestNG-tests-1] Log - Tests are ending!
-[INFO ] 2021-06-18 13:46:38.417 [TestNG-tests-1] Log - Tests is starting!
-[INFO ] 2021-06-18 13:46:38.418 [TestNG-tests-1] Log - TC01 test is starting.
-[INFO ] 2021-06-18 13:46:45.555 [TestNG-tests-1] Log - TC01 test is failed.
-[INFO ] 2021-06-18 13:46:45.959 [TestNG-tests-1] Log - TC02 test is starting.
-[INFO ] 2021-06-18 13:46:47.652 [TestNG-tests-1] Log - TC02 test is succeed.
-[INFO ] 2021-06-18 13:46:47.652 [TestNG-tests-1] Log - TC03 test is starting.
-[INFO ] 2021-06-18 13:46:49.447 [TestNG-tests-1] Log - TC03 test is failed.
-[INFO ] 2021-06-18 13:46:49.844 [TestNG-tests-1] Log - TC05 test is starting.
-[INFO ] 2021-06-18 13:46:54.760 [TestNG-tests-1] Log - TC05 test is failed.
-[INFO ] 2021-06-18 13:46:55.152 [TestNG-tests-1] Log - Tests are ending!
-[INFO ] 2021-06-18 13:46:57.522 [TestNG-tests-1] Log - Tests is starting!
-[INFO ] 2021-06-18 13:46:57.522 [TestNG-tests-1] Log - TC16 test is starting.
-[INFO ] 2021-06-18 13:47:03.774 [TestNG-tests-1] Log - TC16 test is succeed.
-[INFO ] 2021-06-18 13:47:03.774 [TestNG-tests-1] Log - Tests are ending!
-[INFO ] 2021-06-18 13:47:04.960 [TestNG-tests-1] Log - Tests is starting!
-[INFO ] 2021-06-18 13:47:04.961 [TestNG-tests-1] Log - TC07 test is starting.
-[INFO ] 2021-06-18 13:47:10.081 [TestNG-tests-1] Log - TC07 test is failed.
-[INFO ] 2021-06-18 13:47:10.453 [TestNG-tests-1] Log - TC10 test is starting.
-[INFO ] 2021-06-18 13:47:12.403 [TestNG-tests-1] Log - TC10 test is succeed.
-[INFO ] 2021-06-18 13:47:12.404 [TestNG-tests-1] Log - TC11 test is starting.
-[INFO ] 2021-06-18 13:47:14.327 [TestNG-tests-1] Log - TC11 test is failed.
-[INFO ] 2021-06-18 13:47:14.707 [TestNG-tests-1] Log - Tests are ending!
-[INFO ] 2021-06-18 13:47:14.864 [TestNG-tests-1] Log - I am in onFinish method Test on Chrome
+[INFO ] 2021-06-19 15:08:58.385 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:09:43.987 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:09:46.980 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:10:17.052 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:10:19.359 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:10:49.382 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:10:51.543 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:11:08.293 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:11:10.447 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:11:40.507 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:11:42.508 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:12:12.544 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:12:14.493 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:12:34.906 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:12:37.303 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:12:37.305 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:12:39.390 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:12:54.217 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:12:56.294 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:13:12.650 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:13:14.693 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:13:34.077 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:13:36.242 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:13:36.246 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:13:38.405 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:13:38.406 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:13:40.502 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:14:05.579 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:14:07.653 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:14:55.110 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:21:44.003 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:22:22.682 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:27:54.295 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:27:55.951 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:28:10.342 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:28:12.208 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:28:31.471 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:28:33.515 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:28:54.109 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:28:55.697 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:29:18.985 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:29:20.888 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:30:10.436 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:30:12.153 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:30:33.922 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:30:35.584 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:30:35.585 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:30:37.314 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:31:03.386 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:31:05.101 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:31:36.158 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:31:38.320 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:31:59.961 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:32:03.041 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:32:03.043 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:32:06.490 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:32:06.490 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:32:10.836 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:32:34.660 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:32:36.378 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:33:34.917 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:40:06.865 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:45:07.303 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:45:40.079 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:48:18.538 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:48:29.417 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:49:25.292 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:49:58.942 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:55:14.707 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:55:45.359 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:55:47.024 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:55:55.772 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:55:57.759 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:56:09.169 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 15:56:10.790 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 15:56:36.323 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 16:05:04.831 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 16:05:22.704 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 16:05:24.957 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 16:05:39.413 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 16:05:41.066 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 16:06:00.996 [main] Log - I am in onStart method C:/Users/anhng/IdeaProjects/Railway-testing/src/main/java/testCases/Railway
+[INFO ] 2021-06-19 16:06:03.693 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 16:06:03.710 [main] Log - TC02 test is starting.
+[INFO ] 2021-06-19 16:06:29.892 [main] Log - TC02 test is succeed.
+[INFO ] 2021-06-19 16:06:29.900 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 16:06:32.195 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 16:06:32.196 [main] Log - TC03 test is starting.
+[INFO ] 2021-06-19 16:06:39.439 [main] Log - TC03 test is failed.
+[INFO ] 2021-06-19 16:06:39.969 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 16:06:41.811 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 16:06:41.812 [main] Log - TC04 test is starting.
+[INFO ] 2021-06-19 16:07:13.972 [main] Log - TC04 test is succeed.
+[INFO ] 2021-06-19 16:07:13.973 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 16:07:16.074 [main] Log - Tests is starting!
+[INFO ] 2021-06-19 16:07:16.075 [main] Log - TC05 test is starting.
+[INFO ] 2021-06-19 16:07:50.188 [main] Log - TC05 test is failed.
+[INFO ] 2021-06-19 16:07:50.715 [main] Log - Tests are ending!
+[INFO ] 2021-06-19 16:07:51.120 [main] Log - I am in onFinish method C:/Users/anhng/IdeaProjects/Railway-testing/src/main/java/testCases/Railway
