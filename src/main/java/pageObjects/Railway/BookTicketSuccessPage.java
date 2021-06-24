@@ -77,5 +77,4 @@ public class BookTicketSuccessPage extends GeneralPage {
     public String getAmount(){
         return this.getAmountTd().getText();
     }
-
 }

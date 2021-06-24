@@ -4,12 +4,9 @@ import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
-import pageObjects.Railway.ConfirmCodePage;
 import pageObjects.Railway.ForgotPasswordPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
-
-import java.lang.reflect.Method;
 
 public class TC13_Errors_display_if_Password_and_ConfirmPassword_donot_match_when_resetting_password extends BaseTest {
     private HomePage homePage = new HomePage();

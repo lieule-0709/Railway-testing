@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.RegisterPage;
 
-import java.lang.reflect.Method;
-
 public class TC07_User_can_create_new_account extends BaseTest {
     private HomePage homePage = new HomePage();
     private RegisterPage registerPage;

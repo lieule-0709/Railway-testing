@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class GeneralPage {
-
     //Locators
     private final By lbWelcome = By.xpath("//div[@class='account']//strong");
     private final By tabSelected = By.cssSelector(" #menu .selected");
@@ -87,5 +86,4 @@ public class GeneralPage {
     public String getTextOfSelectedTab(){
         return this.getTabSelected().getText();
     }
-
 }

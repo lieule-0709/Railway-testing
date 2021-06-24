@@ -1,6 +1,5 @@
 package testCases.Railway;
 
-import com.mongodb.util.JSON;
 import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
 import org.json.simple.JSONObject;
@@ -8,8 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.RegisterPage;
-
-import java.lang.reflect.Method;
 
 public class TC11_User_cannot_create_account_while_password_PID_fields_are_empty extends BaseTest {
     private HomePage homePage = new HomePage();

@@ -2,27 +2,13 @@ package testCases.Railway;
 
 import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
-import dataObjects.SeatTypes;
-import dataObjects.Stations;
 import org.json.simple.JSONObject;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.Railway.BookTicketPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 import pageObjects.Railway.MyTicketPage;
-
-import java.lang.reflect.Method;
-import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 
 public class TC16_User_can_cancel_a_ticket extends BaseTest {
     private HomePage homePage = new HomePage();

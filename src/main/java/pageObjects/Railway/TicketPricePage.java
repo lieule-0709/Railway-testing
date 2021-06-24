@@ -42,5 +42,4 @@ public class TicketPricePage extends GeneralPage{
     protected WebElement getBookSBCBtn(){
         return Constant.WEBDRIVER.findElement(bookSBCBtn);
     }
-
 }

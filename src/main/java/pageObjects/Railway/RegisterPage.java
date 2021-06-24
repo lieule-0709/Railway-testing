@@ -6,7 +6,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class RegisterPage extends GeneralPage{
-
     //Locator
     private final By inputEmail = By.xpath("//input[@id='email']");
     private final By inputPass = By.xpath("//input[@id='password']");
@@ -19,7 +18,6 @@ public class RegisterPage extends GeneralPage{
     private final By errPwdLbl = By.xpath("//label[@for='password' and @class='validation-error']");
     private final By errConfirmPwdLbl = By.xpath("//label[@for='confirmPassword' and @class='validation-error']");
     private final By errPIDLbl = By.xpath("//label[@for='pid' and @class='validation-error']");
-
 
     //Elements
     protected WebElement getInputEmail(){
@@ -103,5 +101,4 @@ public class RegisterPage extends GeneralPage{
     public String getErrPIDLblText(){
         return this.getErrPIDLbl().getText();
     }
-
 }

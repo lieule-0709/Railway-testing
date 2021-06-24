@@ -72,5 +72,4 @@ public class ChangePwdPage extends GeneralPage{
     public String getErrMsgText(){
         return this.getErrorMsg().getText();
     }
-
 }

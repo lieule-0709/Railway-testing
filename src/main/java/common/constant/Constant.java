@@ -1,7 +1,6 @@
 package common.constant;
 
 import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 
 public class Constant {

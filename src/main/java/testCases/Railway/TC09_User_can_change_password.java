@@ -8,17 +8,13 @@ import pageObjects.Railway.ChangePwdPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 
-import java.lang.reflect.Method;
-
-//import static common.utilities.extentReports.ExtentTestManger.startTest;
-
 public class TC09_User_can_change_password extends BaseTest {
     private HomePage homePage = new HomePage();
     private LoginPage loginPage = new LoginPage();
     private ChangePwdPage changePwdPage;
 
     @Test(description = "User can change password")
-    public void TC09(Method method) {
+    public void TC09() {
         logger = Constant.REPORT.startTest("TC09", "User can change password");
 
         logger.log(LogStatus.INFO, "Step 1", "Navigate to QA Railway Website");

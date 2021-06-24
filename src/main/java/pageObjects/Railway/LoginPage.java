@@ -66,11 +66,15 @@ public class LoginPage extends GeneralPage {
     }
 
     public RegisterPage clickRegistLink(){
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", this.getRegisterLink());
         this.getRegisterLink().click();
         return new RegisterPage();
     }
 
     public ForgotPasswordPage clickForgotPwdLink(){
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", this.getForgotPwdLink());
         this.getForgotPwdLink().click();
         return new ForgotPasswordPage();
     }
@@ -86,5 +90,4 @@ public class LoginPage extends GeneralPage {
     public String getErrPwdMsg(){
         return this.getErrPwdLbl().getText();
     }
-
 }

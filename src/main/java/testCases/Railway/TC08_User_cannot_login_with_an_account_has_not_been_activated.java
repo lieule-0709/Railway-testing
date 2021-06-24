@@ -2,15 +2,10 @@ package testCases.Railway;
 
 import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
-import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
-import org.testng.internal.TestResult;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
-
-import javax.management.monitor.GaugeMonitor;
-import java.lang.reflect.Method;
 
 public class TC08_User_cannot_login_with_an_account_has_not_been_activated extends BaseTest {
     private HomePage homePage = new HomePage();

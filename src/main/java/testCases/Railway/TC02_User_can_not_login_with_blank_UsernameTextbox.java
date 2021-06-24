@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 
-import java.lang.reflect.Method;
-
 public class TC02_User_can_not_login_with_blank_UsernameTextbox extends BaseTest {
 
     private HomePage homePage = new HomePage();

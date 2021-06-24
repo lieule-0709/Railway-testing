@@ -1,6 +1,5 @@
 package testCases.Railway;
 
-import com.mongodb.util.JSON;
 import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
 import org.json.simple.JSONObject;
@@ -8,8 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
-
-import java.lang.reflect.Method;
 
 public class TC03_User_cannot_log_into_Railway_with_invalid_password extends BaseTest {
 

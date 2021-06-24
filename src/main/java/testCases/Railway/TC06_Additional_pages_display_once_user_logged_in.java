@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 
-import java.lang.reflect.Method;
-
 public class TC06_Additional_pages_display_once_user_logged_in extends BaseTest {
     private HomePage homePage = new HomePage();
     private LoginPage loginPage;

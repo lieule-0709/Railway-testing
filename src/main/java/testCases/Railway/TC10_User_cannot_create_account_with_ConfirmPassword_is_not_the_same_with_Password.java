@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.RegisterPage;
 
-import java.lang.reflect.Method;
-
 public class TC10_User_cannot_create_account_with_ConfirmPassword_is_not_the_same_with_Password extends BaseTest {
     private HomePage homePage = new HomePage();
     private RegisterPage registerPage;

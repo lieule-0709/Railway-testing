@@ -2,14 +2,11 @@ package testCases.Railway;
 
 import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
-import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
 import pageObjects.Railway.ForgotPasswordPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
-
-import java.lang.reflect.Method;
 
 public class TC12_Errors_display_when_password_reset_token_is_blank extends BaseTest {
     private HomePage homePage = new HomePage();

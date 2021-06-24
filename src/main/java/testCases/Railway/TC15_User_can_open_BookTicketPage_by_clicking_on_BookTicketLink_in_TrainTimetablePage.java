@@ -2,7 +2,6 @@ package testCases.Railway;
 
 import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
-import dataObjects.Stations;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,8 +9,6 @@ import pageObjects.Railway.BookTicketPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 import pageObjects.Railway.TimeTablePage;
-
-import java.lang.reflect.Method;
 
 public class TC15_User_can_open_BookTicketPage_by_clicking_on_BookTicketLink_in_TrainTimetablePage extends BaseTest {
     private HomePage homePage = new HomePage();

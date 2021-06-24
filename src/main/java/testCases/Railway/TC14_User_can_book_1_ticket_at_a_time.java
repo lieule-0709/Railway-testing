@@ -2,8 +2,6 @@ package testCases.Railway;
 
 import com.relevantcodes.extentreports.LogStatus;
 import common.constant.Constant;
-import dataObjects.SeatTypes;
-import dataObjects.Stations;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,8 +9,6 @@ import pageObjects.Railway.BookTicketPage;
 import pageObjects.Railway.BookTicketSuccessPage;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
-
-import java.lang.reflect.Method;
 
 public class TC14_User_can_book_1_ticket_at_a_time extends BaseTest {
     private HomePage homePage = new HomePage();

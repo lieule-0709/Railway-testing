@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 public class MyTicketPage extends GeneralPage {
-
     //Elements
     protected WebElement getOperationBtn(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String status, String amount){
         return Constant.WEBDRIVER.findElement(By.xpath("//table[@class='MyTable']//td[contains(.,'" + departPlace +
@@ -52,7 +51,6 @@ public class MyTicketPage extends GeneralPage {
         return Constant.WEBDRIVER.findElement(By.xpath("//div[@class='Filter']//strong/span"));
     }
 
-
     //Methods
     public void cancelTicket(String departPlace, String arrivePlace, String seatType, String departDate, String bookDate, String status, String amount){
         WebElement btn = this.getOperationBtn(departPlace,arrivePlace, seatType, departDate, bookDate,status,amount);
@@ -86,5 +84,4 @@ public class MyTicketPage extends GeneralPage {
                     "')]/following-sibling::td[contains(.,'"+ amount + "')]/following-sibling::td/input")).size();
         return iCount;
     }
-
 }

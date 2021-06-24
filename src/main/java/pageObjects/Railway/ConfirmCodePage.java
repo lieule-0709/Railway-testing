@@ -24,5 +24,4 @@ public class ConfirmCodePage extends GeneralPage {
         this.getCodeInput().sendKeys(code);
         this.getConfirmBtn().click();
     }
-
 }

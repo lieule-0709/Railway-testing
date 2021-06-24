@@ -17,5 +17,4 @@ public class ContactPage extends GeneralPage{
     public void clickEmailLink(){
         this.getLinkEmail().click();
     }
-
 }
