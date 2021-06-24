@@ -17,7 +17,6 @@ public class LoginPage extends GeneralPage {
     private final By errEmailLbl = By.xpath("//label[@for='username' and @class='validation-error']");
     private final By errPwdLbl = By.xpath("//label[@for='password' and @class='validation-error']");
 
-
     //Elements
     protected WebElement getTxtUsername() {
         return Constant.WEBDRIVER.findElement(userNameInput);
