@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="browserName" value="chrome"></parameter>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/anhng/IdeaProjects/Railway-testing/src/main/java/testCases/Railway">
+        <classes>
+            <class name="testCases.Railway.TC17_User_can_filter_ticket_with_DepartDate">
+                <methods>
+                    <include name="TC17"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

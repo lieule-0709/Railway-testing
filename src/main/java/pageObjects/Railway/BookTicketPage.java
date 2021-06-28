@@ -74,6 +74,16 @@ public class BookTicketPage extends GeneralPage {
         this.getBookTicketBtn().click();
     }
 
+    //Methods
+    public void bookTicketWithDate(String departDate){
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("arguments[0].scrollIntoView(true);", this.getBookTicketBtn());
+
+        Utilities.selectOption(this.getDepartDateCbx(), departDate);
+
+        this.getBookTicketBtn().click();
+    }
+
     public String getDepartStation(){
         Select select = new Select(Constant.WEBDRIVER.findElement(departStationCbx));
         return select.getFirstSelectedOption().getText();

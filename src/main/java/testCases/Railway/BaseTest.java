@@ -37,7 +37,7 @@ public class BaseTest {
     public void beforeSuite(String browserName) {
         switch (browserName) {
             case "chrome":
-                Constant.REPORT = new ExtentReports(System.getProperty("user.dir") + "\\ExtentReportResults_Chrome.html");
+                Constant.REPORT = new ExtentReports(System.getProperty("user.dir") + "\\ExtentReportResults_TC17_Chrome.html");
                 break;
             case "firefox":
                 Constant.REPORT = new ExtentReports(System.getProperty("user.dir") + "\\ExtentReportResults_Firefox.html");
@@ -56,10 +56,10 @@ public class BaseTest {
     public void beforeClass(String browserName) {
         switch (browserName) {
             case "chrome":
-                ChromeOptions ChOptions = new ChromeOptions();
-                ChOptions.addArguments("--headless");
+//                ChromeOptions ChOptions = new ChromeOptions();
+//                ChOptions.addArguments("--headless");
                 WebDriverManager.chromedriver().setup();
-                Constant.WEBDRIVER = new ChromeDriver(ChOptions);
+                Constant.WEBDRIVER = new ChromeDriver();
                 break;
             case "firefox":
                 FirefoxOptions FFOptions = new FirefoxOptions();

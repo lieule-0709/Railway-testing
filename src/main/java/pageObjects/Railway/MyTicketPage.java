@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class MyTicketPage extends GeneralPage {
@@ -83,5 +84,19 @@ public class MyTicketPage extends GeneralPage {
                     "')]/following-sibling::td[contains(.,'"+ status +
                     "')]/following-sibling::td[contains(.,'"+ amount + "')]/following-sibling::td/input")).size();
         return iCount;
+    }
+
+    public void filterTicketByDate(String departDate){
+        this.getDepartDateTxt().sendKeys(departDate);
+        this.getFilterBtn().click();
+    }
+
+    public boolean checkDateFilter(String departDate){
+        List<WebElement> dates = Constant.WEBDRIVER.findElements(By.xpath("//td[count(//tr[@class='TableSmallHeader']//th[.='Depart Date']/preceding-sibling::th)+1]"));
+        for(int i=0; i< dates.size(); i++){
+            System.out.println(dates.get(i).getText());
+            if(!dates.get(i).getText().equals(departDate)) return false;
+        }
+        return true;
     }
 }
